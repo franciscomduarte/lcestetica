@@ -6,7 +6,6 @@
     <title>Lara Cristian - Estética e Saúde Integrativa</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,7 +75,6 @@
         /* --- 3. Hero Section (Banner Principal) --- */
         .hero-section {
             position: relative;
-            /* Imagem de Fundo (Aplicação Estética) */
             background-image: url('https://images.pexels.com/photos/5069455/pexels-photo-5069455.jpeg?auto=compress&cs=tinysrgb&w=1600');
             background-size: cover;
             background-position: center;
@@ -122,7 +120,7 @@
             border: none;
             padding: 12px 35px;
             font-weight: 500;
-            border-radius: 50px; /* Borda arredondada */
+            border-radius: 50px;
             transition: all 0.3s ease;
         }
 
@@ -133,7 +131,7 @@
             box-shadow: 0 4px 10px rgba(176, 125, 98, 0.4);
         }
 
-        /* --- 5. Serviços (Cards) --- */
+        /* --- 5. Serviços (Estilos Gerais) --- */
         .services-section {
             padding: 80px 0;
         }
@@ -147,43 +145,6 @@
             color: var(--primary-color);
             font-weight: 600;
             font-size: 2.5rem;
-        }
-
-        .service-card {
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            height: 100%;
-            transition: transform 0.3s;
-            background-color: #fff;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card img {
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .service-card .card-body {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .service-card .card-title {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .service-card .card-text {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 25px;
-            line-height: 1.6;
         }
 
         /* --- 6. Footer (Rodapé) --- */
@@ -262,11 +223,9 @@
             .social-container { justify-content: center; display: flex; margin-bottom: 15px; }
         }
 		
-		/* --- Estilos Personalizados da Página de Serviços --- */
-
-		/* Estilo das Abas (Tabs) */
+		/* --- Estilos Personalizados da Página de Serviços (Abas e Cards Horizontais) --- */
 		.nav-pills .nav-link {
-			color: #666; /* Cor do texto quando inativo */
+			color: #666;
 			background-color: transparent;
 			font-weight: 500;
 			border: 1px solid transparent;
@@ -279,19 +238,17 @@
 		}
 
 		.nav-pills .nav-link.active {
-			background-color: var(--primary-color) !important; /* Fundo Terracota */
+			background-color: var(--primary-color) !important;
 			color: #fff !important;
 			box-shadow: 0 4px 10px rgba(176, 125, 98, 0.4);
 		}
 
-		/* Títulos dentro dos cards */
 		.text-primary-custom {
 			color: var(--primary-color);
 			font-weight: 600;
 			font-size: 1.1rem;
 		}
 
-		/* Botão de Agendar (Outline) */
 		.btn-outline-custom {
 			color: var(--primary-color);
 			border-color: var(--primary-color);
@@ -303,11 +260,26 @@
 			color: #fff;
 		}
 
-		/* Ajuste de Imagem no Card Horizontal */
 		.object-fit-cover {
 			object-fit: cover;
 			width: 100%;
 			height: 100%;
+		}
+		
+		/* Efeito nos cards de depoimento */
+		.testimonial-card {
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.testimonial-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+		}
+
+		.avatar-placeholder {
+			font-family: var(--font-body);
+			font-size: 1.2rem;
+			border: 2px solid rgba(176, 125, 98, 0.2);
 		}
     </style>
 </head>
@@ -329,6 +301,7 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
                     <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#localizacao">Localização</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                 </ul>
             </div>
@@ -342,113 +315,439 @@
                 <div class="col-lg-7">
                     <h1 class="hero-title">Realce sua beleza natural com saúde</h1>
                     <p class="hero-subtitle">Descubra o poder da estética integrativa. Tratamentos personalizados para rejuvenescer sua pele e elevar sua autoestima.</p>
-                    <a href="https://wa.me/5599999999999" class="btn btn-custom">Agendar Avaliação</a>
+                    <a href="https://wa.me/5561998092709" class="btn btn-custom">Agendar Avaliação</a>
                 </div>
             </div>
         </div>
     </header>
 
-<section id="servicos" class="services-section bg-light">
-    <div class="container">
-        
-        <div class="section-header text-center mb-5">
-            <h2 class="display-5 fw-bold" style="color: var(--primary-color);">Menu de Tratamentos</h2>
-            <p class="text-muted lead">Protocolos exclusivos personalizados para sua necessidade.</p>
-        </div>
-
-        <ul class="nav nav-pills justify-content-center mb-5" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active rounded-pill px-4 py-2 mx-1" id="pills-injetaveis-tab" data-bs-toggle="pill" data-bs-target="#pills-injetaveis" type="button" role="tab">Injetáveis</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link rounded-pill px-4 py-2 mx-1" id="pills-faciais-tab" data-bs-toggle="pill" data-bs-target="#pills-faciais" type="button" role="tab">Faciais</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link rounded-pill px-4 py-2 mx-1" id="pills-corporais-tab" data-bs-toggle="pill" data-bs-target="#pills-corporais" type="button" role="tab">Corporais</button>
-            </li>
-        </ul>
-
-        <div class="tab-content" id="pills-tabContent">
+    <section id="servicos" class="services-section bg-light py-5">
+        <div class="container">
             
-            <div class="tab-pane fade show active" id="pills-injetaveis" role="tabpanel">
-                <div class="row g-4 justify-content-center">
-                    
-                    <div class="col-lg-6">
-                        <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                            <div class="row g-0 align-items-center h-100">
-                                <div class="col-4">
-                                    <img src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" alt="Botox" style="min-height: 200px;">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between align-items-center mb-2">
-                                            <h5 class="card-title mb-0 text-primary-custom">Toxina Botulínica</h5>
-                                            <span class="badge bg-light text-dark border">30 min</span>
+            <div class="section-header text-center mb-5">
+                <h2 class="display-5 fw-bold" style="color: var(--primary-color);">Menu de Tratamentos</h2>
+                <p class="text-muted lead">Protocolos exclusivos de Estética e Saúde Integrativa.</p>
+            </div>
+
+            <ul class="nav nav-pills justify-content-center mb-5" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active rounded-pill px-4 py-2 mx-1" id="pills-faciais-tab" data-bs-toggle="pill" data-bs-target="#pills-faciais" type="button" role="tab">Faciais</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-pill px-4 py-2 mx-1" id="pills-corporais-tab" data-bs-toggle="pill" data-bs-target="#pills-corporais" type="button" role="tab">Corporais</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-pill px-4 py-2 mx-1" id="pills-integrativa-tab" data-bs-toggle="pill" data-bs-target="#pills-integrativa" type="button" role="tab">Saúde Integrativa & Capilar</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="pills-tabContent">
+                
+                <div class="tab-pane fade show active" id="pills-faciais" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Toxina Botulínica (Botox)</h5>
+                                                <span class="badge bg-light text-dark border">R$ 850,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Tratamento de rugas de expressão, marcas na testa, olhos, nariz e pescoço.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Botox." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
                                         </div>
-                                        <p class="card-text small text-muted">Suaviza rugas dinâmicas e previne marcas de expressão com resultados naturais.</p>
-                                        <a href="https://wa.me/5599999999999?text=Olá, gostaria de saber mais sobre Botox." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/3851905/pexels-photo-3851905.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Preenchimento Bigode Chinês</h5>
+                                                <span class="badge bg-light text-dark border">R$ 700,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Utilização de ácido hialurônico para suavizar o sulco nasolabial.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Preenchimento." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/3762466/pexels-photo-3762466.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Bioestimulador de Colágeno</h5>
+                                                <span class="badge bg-light text-dark border">R$ 1.200,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Aplicação de substância que estimula a produção natural de colágeno.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Bioestimulador." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Skinbooster</h5>
+                                                <span class="badge bg-light text-dark border">R$ 200,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Hidratação profunda com ácido hialurônico.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Skinbooster." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/5069455/pexels-photo-5069455.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Fios de PDO</h5>
+                                                <span class="badge bg-light text-dark border">A partir de R$ 140</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Lisos, Parafuso ou Espiculados. Estimulam colágeno e promovem lifting facial.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Fios de PDO." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/5069609/pexels-photo-5069609.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Melasma & Microagulhamento</h5>
+                                                <span class="badge bg-light text-dark border">A partir de R$ 150</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Tratamentos com enzimas despigmentantes e ativos dry delivery.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamentos faciais." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-lg-6">
-                        <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                            <div class="row g-0 align-items-center h-100">
-                                <div class="col-4">
-                                    <img src="https://images.pexels.com/photos/3851905/pexels-photo-3851905.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" alt="Preenchimento" style="min-height: 200px;">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between align-items-center mb-2">
-                                            <h5 class="card-title mb-0 text-primary-custom">Preenchimento Labial</h5>
-                                            <span class="badge bg-light text-dark border">45 min</span>
+                <div class="tab-pane fade" id="pills-corporais" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Gordura Localizada</h5>
+                                                <span class="badge bg-light text-dark border">R$ 130,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Utilização de enzimas e Corrente Russa para estimulação elétrica.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento para gordura localizada." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
                                         </div>
-                                        <p class="card-text small text-muted">Definição de contorno e volume na medida certa para lábios hidratados e desenhados.</p>
-                                        <a href="https://wa.me/5599999999999?text=Olá, gostaria de saber mais sobre Preenchimento." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/3762402/pexels-photo-3762402.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Flacidez, Celulite e Estrias</h5>
+                                                <span class="badge bg-light text-dark border">R$ 110,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Aplicação de enzimas lipolíticas ou bioestimulantes.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento corporal." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/3762466/pexels-photo-3762466.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Papada (Queixo Duplo)</h5>
+                                                <span class="badge bg-light text-dark border">R$ 110,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Aplicação de enzimas redutoras de gordura.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento de papada." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
 
-            <div class="tab-pane fade" id="pills-faciais" role="tabpanel">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                            <div class="row g-0 align-items-center h-100">
-                                <div class="col-4">
-                                    <img src="https://images.pexels.com/photos/3762466/pexels-photo-3762466.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between align-items-center mb-2">
-                                            <h5 class="card-title mb-0 text-primary-custom">Skinbooster</h5>
-                                            <span class="badge bg-light text-dark border">3 sessões</span>
+                <div class="tab-pane fade" id="pills-integrativa" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Ozonioterapia</h5>
+                                                <span class="badge bg-light text-dark border">R$ 150,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Ações anti-inflamatórias, antimicrobianas, cicatrizantes e imunomoduladoras.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Ozonioterapia." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
                                         </div>
-                                        <p class="card-text small text-muted">Hidratação profunda injetável que devolve o viço e a elasticidade da pele.</p>
-                                        <a href="#" class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/3865557/pexels-photo-3865557.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Ventosaterapia</h5>
+                                                <span class="badge bg-light text-dark border">R$ 60,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Tratamento de dores crônicas, inflamações e doenças funcionais.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Ventosaterapia." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/4021769/pexels-photo-4021769.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Terapia Neural</h5>
+                                                <span class="badge bg-light text-dark border">R$ 150,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Equilibra o sistema nervoso e trata dores crônicas com anestésicos locais.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Terapia Neural." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/3993444/pexels-photo-3993444.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Alopécia / Queda de Cabelo</h5>
+                                                <span class="badge bg-light text-dark border">R$ 130,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Tratamento para calvície com enzimas e/ou ozonioterapia.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento capilar." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="https://images.pexels.com/photos/4056529/pexels-photo-4056529.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Detox & Nutrição</h5>
+                                                <span class="badge bg-light text-dark border">R$ 1.100,00</span>
+                                            </div>
+                                            <p class="card-text small text-muted">Protocolo de 1 mês para desintoxicação, desinflamação e nutrição.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse no protocolo Detox." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="tab-pane fade" id="pills-corporais" role="tabpanel">
-                <div class="text-center py-5">
-                    <p class="text-muted">Novos protocolos em breve...</p>
-                </div>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
+
+    <section id="depoimentos" class="testimonials-section py-5 bg-white">
+        <div class="container">
+            
+            <div class="section-header text-center mb-5">
+                <h2 class="display-5 fw-bold" style="color: var(--primary-color);">O que dizem nossas clientes</h2>
+                <p class="text-muted lead">Histórias reais de quem transformou sua autoestima conosco.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm testimonial-card">
+                        <div class="card-body p-4 text-center">
+                            <div class="mb-3 text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <i class="bi bi-quote fs-1 text-primary-custom mb-3 d-block opacity-25"></i>
+                            <p class="card-text text-muted fst-italic mb-4">"Fiz o Botox com a Dra. Lara e amei o resultado! Ficou super natural, exatamente como eu queria. O atendimento é impecável e o ambiente muito acolhedor."</p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="avatar-placeholder rounded-circle bg-light d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; color: var(--primary-color); font-weight: bold;">M.S.</div>
+                                <div class="text-start">
+                                    <h6 class="fw-bold mb-0">Mariana Silva</h6>
+                                    <small class="text-muted">Procedimento: Botox</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm testimonial-card">
+                        <div class="card-body p-4 text-center">
+                            <div class="mb-3 text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <i class="bi bi-quote fs-1 text-primary-custom mb-3 d-block opacity-25"></i>
+                            <p class="card-text text-muted fst-italic mb-4">"Estava sofrendo muito com dores musculares e a Ventosaterapia foi milagrosa. A Dra. tem mãos de fada e explica tudo com muita paciência. Recomendo demais!"</p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="avatar-placeholder rounded-circle bg-light d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; color: var(--primary-color); font-weight: bold;">C.O.</div>
+                                <div class="text-start">
+                                    <h6 class="fw-bold mb-0">Carla Oliveira</h6>
+                                    <small class="text-muted">Procedimento: Ventosaterapia</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm testimonial-card">
+                        <div class="card-body p-4 text-center">
+                            <div class="mb-3 text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <i class="bi bi-quote fs-1 text-primary-custom mb-3 d-block opacity-25"></i>
+                            <p class="card-text text-muted fst-italic mb-4">"O preenchimento labial ficou perfeito, deu o volume que eu queria sem ficar exagerado. Profissionalismo e biossegurança nota 10!"</p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="avatar-placeholder rounded-circle bg-light d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; color: var(--primary-color); font-weight: bold;">F.A.</div>
+                                <div class="text-start">
+                                    <h6 class="fw-bold mb-0">Fernanda Alves</h6>
+                                    <small class="text-muted">Procedimento: Preenchimento</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="localizacao" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="display-5 fw-bold" style="color: var(--primary-color);">Nossa Localização</h2>
+                <p class="text-muted lead">Venha nos visitar no Vista Shopping.</p>
+            </div>
+            <div class="row align-items-center shadow p-4 bg-white rounded">
+                <div class="col-md-5 mb-4 mb-md-0">
+                    <h4 class="mb-3" style="color: var(--primary-color);">Endereço</h4>
+                    <p class="lead text-muted">
+                        <i class="bi bi-geo-alt-fill me-2" style="color: var(--primary-color);"></i>
+                        Vista Shopping - Q. 101 lote 07 - A<br>
+                        Águas Claras, Brasília - DF<br>
+                        CEP: 71906-750
+                    </p>
+                    <p class="text-muted mt-3">
+                        <i class="bi bi-clock me-2"></i> Atendimento com hora marcada.
+                    </p>
+                    <a href="https://www.google.com/maps/search/Vista+Shopping+Águas+Claras" target="_blank" class="btn btn-outline-custom mt-3">Ver no Google Maps</a>
+                </div>
+                <div class="col-md-7">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://maps.google.com/maps?q=Vista%20Shopping%20Aguas%20Claras&t=&z=15&ie=UTF8&iwloc=&output=embed" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer id="contato" class="footer-custom">
         <div class="container">
@@ -456,29 +755,30 @@
                 
                 <div class="col-md-4 text-center text-md-start">
                     <div class="brand-footer">Lara Cristian</div>
-                    <p class="text-white small">Excelência em estética integrativa.<br>Cuidando de você de dentro para fora.</p>
+                    <p class="text-white small mb-3">Excelência em estética integrativa.<br>Cuidando de você de dentro para fora.</p>
+                    <p class="text-white-50 small">
+                        <i class="bi bi-geo-alt me-1"></i> Vista Shopping - Águas Claras, DF
+                    </p>
                 </div>
 
                 <div class="col-md-4 text-center">
                     <a href="#home" class="footer-link">Home</a>
                     <a href="#servicos" class="footer-link">Serviços</a>
                     <a href="#depoimentos" class="footer-link">Depoimentos</a>
+                    <a href="#localizacao" class="footer-link">Localização</a>
                 </div>
 
                 <div class="col-md-4 text-center text-md-end mt-4 mt-md-0">
                     <div class="social-container mb-3">
-                        <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
+                        <a href="https://instagram.com/lc_esteticaintegrativa" target="_blank" class="social-icon" title="Instagram">
                             <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
-                            <i class="bi bi-facebook"></i>
                         </a>
                         <a href="mailto:contato@laracristian.com" class="social-icon" title="E-mail">
                             <i class="bi bi-envelope"></i>
                         </a>
                     </div>
                     
-                    <a href="https://wa.me/5599999999999" target="_blank" class="btn-whatsapp-footer">
+                    <a href="https://wa.me/5561998092709" target="_blank" class="btn-whatsapp-footer">
                         <i class="bi bi-whatsapp me-2"></i> Agendar pelo WhatsApp
                     </a>
                 </div>
