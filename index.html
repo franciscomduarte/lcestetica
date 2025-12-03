@@ -261,6 +261,54 @@
             .footer-custom .col-md-4 { margin-bottom: 30px; }
             .social-container { justify-content: center; display: flex; margin-bottom: 15px; }
         }
+		
+		/* --- Estilos Personalizados da Página de Serviços --- */
+
+		/* Estilo das Abas (Tabs) */
+		.nav-pills .nav-link {
+			color: #666; /* Cor do texto quando inativo */
+			background-color: transparent;
+			font-weight: 500;
+			border: 1px solid transparent;
+			transition: all 0.3s ease;
+		}
+
+		.nav-pills .nav-link:hover {
+			color: var(--primary-color);
+			border-color: var(--primary-color);
+		}
+
+		.nav-pills .nav-link.active {
+			background-color: var(--primary-color) !important; /* Fundo Terracota */
+			color: #fff !important;
+			box-shadow: 0 4px 10px rgba(176, 125, 98, 0.4);
+		}
+
+		/* Títulos dentro dos cards */
+		.text-primary-custom {
+			color: var(--primary-color);
+			font-weight: 600;
+			font-size: 1.1rem;
+		}
+
+		/* Botão de Agendar (Outline) */
+		.btn-outline-custom {
+			color: var(--primary-color);
+			border-color: var(--primary-color);
+			font-weight: 500;
+		}
+
+		.btn-outline-custom:hover {
+			background-color: var(--primary-color);
+			color: #fff;
+		}
+
+		/* Ajuste de Imagem no Card Horizontal */
+		.object-fit-cover {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
     </style>
 </head>
 <body>
@@ -300,49 +348,107 @@
         </div>
     </header>
 
-    <section id="servicos" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nossos Tratamentos</h2>
-                <p class="text-muted">Conheça nossos procedimentos mais procurados</p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card service-card">
-                        <img src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="Aplicação de Botox">
-                        <div class="card-body">
-                            <h5 class="card-title">Toxina Botulínica</h5>
-                            <p class="card-text">Suavize rugas e linhas de expressão preservando a naturalidade do seu rosto. Ideal para prevenção e tratamento.</p>
-                            <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill">Saiba mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card service-card">
-                        <img src="https://images.pexels.com/photos/3762466/pexels-photo-3762466.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="Estética Facial">
-                        <div class="card-body">
-                            <h5 class="card-title">Harmonização Facial</h5>
-                            <p class="card-text">Procedimentos combinados para equilibrar os traços do rosto, realçando sua beleza única com segurança.</p>
-                            <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill">Saiba mais</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card service-card">
-                        <img src="https://images.pexels.com/photos/3762402/pexels-photo-3762402.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="Pele Radiante">
-                        <div class="card-body">
-                            <h5 class="card-title">Bioestimuladores</h5>
-                            <p class="card-text">Recupere a firmeza e a qualidade da pele estimulando a produção natural de colágeno do seu organismo.</p>
-                            <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill">Saiba mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section id="servicos" class="services-section bg-light">
+    <div class="container">
+        
+        <div class="section-header text-center mb-5">
+            <h2 class="display-5 fw-bold" style="color: var(--primary-color);">Menu de Tratamentos</h2>
+            <p class="text-muted lead">Protocolos exclusivos personalizados para sua necessidade.</p>
         </div>
-    </section>
+
+        <ul class="nav nav-pills justify-content-center mb-5" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active rounded-pill px-4 py-2 mx-1" id="pills-injetaveis-tab" data-bs-toggle="pill" data-bs-target="#pills-injetaveis" type="button" role="tab">Injetáveis</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill px-4 py-2 mx-1" id="pills-faciais-tab" data-bs-toggle="pill" data-bs-target="#pills-faciais" type="button" role="tab">Faciais</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill px-4 py-2 mx-1" id="pills-corporais-tab" data-bs-toggle="pill" data-bs-target="#pills-corporais" type="button" role="tab">Corporais</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+            
+            <div class="tab-pane fade show active" id="pills-injetaveis" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                    
+                    <div class="col-lg-6">
+                        <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                            <div class="row g-0 align-items-center h-100">
+                                <div class="col-4">
+                                    <img src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" alt="Botox" style="min-height: 200px;">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="card-title mb-0 text-primary-custom">Toxina Botulínica</h5>
+                                            <span class="badge bg-light text-dark border">30 min</span>
+                                        </div>
+                                        <p class="card-text small text-muted">Suaviza rugas dinâmicas e previne marcas de expressão com resultados naturais.</p>
+                                        <a href="https://wa.me/5599999999999?text=Olá, gostaria de saber mais sobre Botox." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                            <div class="row g-0 align-items-center h-100">
+                                <div class="col-4">
+                                    <img src="https://images.pexels.com/photos/3851905/pexels-photo-3851905.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" alt="Preenchimento" style="min-height: 200px;">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="card-title mb-0 text-primary-custom">Preenchimento Labial</h5>
+                                            <span class="badge bg-light text-dark border">45 min</span>
+                                        </div>
+                                        <p class="card-text small text-muted">Definição de contorno e volume na medida certa para lábios hidratados e desenhados.</p>
+                                        <a href="https://wa.me/5599999999999?text=Olá, gostaria de saber mais sobre Preenchimento." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-faciais" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                            <div class="row g-0 align-items-center h-100">
+                                <div class="col-4">
+                                    <img src="https://images.pexels.com/photos/3762466/pexels-photo-3762466.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="card-title mb-0 text-primary-custom">Skinbooster</h5>
+                                            <span class="badge bg-light text-dark border">3 sessões</span>
+                                        </div>
+                                        <p class="card-text small text-muted">Hidratação profunda injetável que devolve o viço e a elasticidade da pele.</p>
+                                        <a href="#" class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-corporais" role="tabpanel">
+                <div class="text-center py-5">
+                    <p class="text-muted">Novos protocolos em breve...</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <footer id="contato" class="footer-custom">
         <div class="container">
