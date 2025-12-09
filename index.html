@@ -22,13 +22,26 @@
             --text-light: #ffffff;
             --font-body: 'Poppins', sans-serif;
             --font-script: 'Great Vibes', cursive; /* Fonte da Logo */
+            --logo-primary: #7a6f63; /* nome */
+            --logo-secondary: #c77a52; /* subtítulo */
         }
+
+        .brand-logo span.script-name { color: var(--logo-primary); }
+        .brand-logo span.sub-name { color: var(--logo-secondary); }
 
         body {
             font-family: var(--font-body);
             color: var(--text-dark);
             background-color: #fdfdfd;
         }
+
+        @font-face {
+            font-family: "Belly Betty";
+            src: url("BellyBetty.ttf") format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
 
         /* --- 2. Navbar (Menu Superior) --- */
         .navbar {
@@ -40,24 +53,26 @@
 
         .brand-logo {
             text-decoration: none;
-            line-height: 1.2;
+            display: inline-block;
         }
 
         .brand-logo span.script-name {
-            font-family: var(--font-script);
-            font-size: 2.2rem;
-            color: var(--primary-color);
+            font-family: "Belly Betty", var(--font-script), cursive;
+            font-size: 3.2rem;            /* proporcional ao logo */
+            color: #7a6f63;               /* cor do texto principal */
             display: block;
+            line-height: 1.1;
+            font-weight: 400;             /* mantém leve como no logo */
         }
-        
+
         .brand-logo span.sub-name {
-            font-family: var(--font-body);
-            font-size: 0.7rem;
-            letter-spacing: 2px;
+            font-family: var(--font-body); /* fonte secundária que você usa no site */
+            font-size: 0.8rem;
+            letter-spacing: 3px;          /* igual ao logo */
             text-transform: uppercase;
-            color: #888;
+            color: #c77a52;               /* terracota do subtítulo */
             display: block;
-            margin-top: -5px;
+            margin-top: 0.25rem;
             font-weight: 600;
         }
 
@@ -155,7 +170,7 @@
         }
 
         .brand-footer {
-            font-family: var(--font-script);
+            font-family: "Belly Betty";
             font-size: 2.5rem;
             color: var(--primary-color);
             margin-bottom: 10px;
@@ -314,7 +329,9 @@
             <div class="row">
                 <div class="col-lg-7">
                     <h1 class="hero-title">Realce sua beleza natural com saúde</h1>
-                    <p class="hero-subtitle">Descubra o poder da estética integrativa. Tratamentos personalizados para rejuvenescer sua pele e elevar sua autoestima.</p>
+                    <p>Na LC Estética e Saúde Integrativa, unimos ciência e naturalidade para cuidar da sua pele, do corpo e do bem-estar.
+                        Somos referência em Ozonioterapia, Botox, Fios de PDO, Terapia Capilar e Terapia Neural. Atendemos em Águas Claras com protocolos exclusivos, olhar humanizado e resultados naturais.
+                        Cuide-se de dentro pra fora!</p>
                     <a href="https://wa.me/5561998092709" class="btn btn-custom">Agendar Avaliação</a>
                 </div>
             </div>
@@ -339,6 +356,9 @@
                 <li class="nav-item" role="presentation">
                     <button class="nav-link rounded-pill px-4 py-2 mx-1" id="pills-integrativa-tab" data-bs-toggle="pill" data-bs-target="#pills-integrativa" type="button" role="tab">Saúde Integrativa & Capilar</button>
                 </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-pill px-4 py-2 mx-1" id="pills-recovery-tab" data-bs-toggle="pill" data-bs-target="#pills-recovery" type="button" role="tab">Protocolos com Bota Recovery</button>
+                </li>
             </ul>
 
             <div class="tab-content" id="pills-tabContent">
@@ -355,7 +375,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Toxina Botulínica (Botox)</h5>
-                                                <span class="badge bg-light text-dark border">R$ 850,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Tratamento de rugas de expressão, marcas na testa, olhos, nariz e pescoço.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Botox." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -375,7 +394,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Preenchimento Bigode Chinês</h5>
-                                                <span class="badge bg-light text-dark border">R$ 700,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Utilização de ácido hialurônico para suavizar o sulco nasolabial.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Preenchimento." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -389,13 +407,12 @@
                             <div class="card service-card-horizontal h-100 border-0 shadow-sm">
                                 <div class="row g-0 align-items-center h-100">
                                     <div class="col-4">
-                                        <img src="https://images.pexels.com/photos/3762466/pexels-photo-3762466.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
+                                        <img src="bioestimulador.jpeg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
                                     </div>
                                     <div class="col-8">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Bioestimulador de Colágeno</h5>
-                                                <span class="badge bg-light text-dark border">R$ 1.200,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Aplicação de substância que estimula a produção natural de colágeno.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Bioestimulador." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -415,7 +432,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Skinbooster</h5>
-                                                <span class="badge bg-light text-dark border">R$ 200,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Hidratação profunda com ácido hialurônico.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Skinbooster." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -435,7 +451,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Fios de PDO</h5>
-                                                <span class="badge bg-light text-dark border">A partir de R$ 140</span>
                                             </div>
                                             <p class="card-text small text-muted">Lisos, Parafuso ou Espiculados. Estimulam colágeno e promovem lifting facial.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Fios de PDO." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -455,7 +470,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Melasma & Microagulhamento</h5>
-                                                <span class="badge bg-light text-dark border">A partir de R$ 150</span>
                                             </div>
                                             <p class="card-text small text-muted">Tratamentos com enzimas despigmentantes e ativos dry delivery.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamentos faciais." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -479,7 +493,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Gordura Localizada</h5>
-                                                <span class="badge bg-light text-dark border">R$ 130,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Utilização de enzimas e Corrente Russa para estimulação elétrica.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento para gordura localizada." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -499,7 +512,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Flacidez, Celulite e Estrias</h5>
-                                                <span class="badge bg-light text-dark border">R$ 110,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Aplicação de enzimas lipolíticas ou bioestimulantes.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento corporal." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -519,7 +531,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Papada (Queixo Duplo)</h5>
-                                                <span class="badge bg-light text-dark border">R$ 110,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Aplicação de enzimas redutoras de gordura.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento de papada." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -543,7 +554,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Ozonioterapia</h5>
-                                                <span class="badge bg-light text-dark border">R$ 150,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Ações anti-inflamatórias, antimicrobianas, cicatrizantes e imunomoduladoras.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Ozonioterapia." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -563,7 +573,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Ventosaterapia</h5>
-                                                <span class="badge bg-light text-dark border">R$ 60,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Tratamento de dores crônicas, inflamações e doenças funcionais.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Ventosaterapia." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -583,7 +592,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Terapia Neural</h5>
-                                                <span class="badge bg-light text-dark border">R$ 150,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Equilibra o sistema nervoso e trata dores crônicas com anestésicos locais.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Terapia Neural." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -603,7 +611,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Alopécia / Queda de Cabelo</h5>
-                                                <span class="badge bg-light text-dark border">R$ 130,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Tratamento para calvície com enzimas e/ou ozonioterapia.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento capilar." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -623,7 +630,6 @@
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <h5 class="card-title mb-0 text-primary-custom">Detox & Nutrição</h5>
-                                                <span class="badge bg-light text-dark border">R$ 1.100,00</span>
                                             </div>
                                             <p class="card-text small text-muted">Protocolo de 1 mês para desintoxicação, desinflamação e nutrição.</p>
                                             <a href="https://wa.me/5561998092709?text=Olá, tenho interesse no protocolo Detox." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
@@ -632,6 +638,89 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-recovery" role="tabpanel">
+                    <div class="mb-4 p-4 bg-white rounded shadow-sm border-start border-4 border-primary-subtle">
+                        <h5 class="text-primary-custom mb-3">Benefícios da Bota de Compressão</h5>
+                        <p class="text-muted small mb-3">As botas de compressão são excelentes para:</p>
+                        <div class="row text-muted small">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Drenagem linfática</li>
+                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Recuperação muscular</li>
+                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Redução de edema</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Relaxamento</li>
+                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Alívio de dores e peso nas pernas</li>
+                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Auxílio pós-treino e pós-procedimentos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="ava.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Protocolo Drenante</h5>
+                                            </div>
+                                            <p class="card-text small text-muted"><strong>Indicação:</strong> Pernas pesadas, inchaço e retenção de líquidos.<br><strong>Tempo:</strong> 20–30 min.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse no Protocolo Drenante." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="ava2.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Protocolo Relaxante</h5>
+                                            </div>
+                                            <p class="card-text small text-muted"><strong>Indicação:</strong> Estresse, tensão e cansaço nas pernas.<br>Pressão leve para relaxamento profundo.</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse no Protocolo Relaxante." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
+                                <div class="row g-0 align-items-center h-100">
+                                    <div class="col-4">
+                                        <img src="ava3.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title mb-0 text-primary-custom">Pós-Liberação Miofascial</h5>
+                                            </div>
+                                            <p class="card-text small text-muted"><strong>Indicação:</strong> Pós liberação. Com Terapia Neural.<br><strong>Tempo:</strong> 15–20 min (suave).</p>
+                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse no Protocolo Pós-Liberação." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -788,7 +877,7 @@
 
             <div class="row">
                 <div class="col text-center">
-                    <p class="small text-muted mb-0">&copy; 2025 Lara Cristian - Estética Integrativa. Todos os direitos reservados.</p>
+                    <p class="text-white-50 small">© 2025 Lara Cristian - Estética Integrativa. Todos os direitos reservados.</p>
                 </div>
             </div>
         </div>
