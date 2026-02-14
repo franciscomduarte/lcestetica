@@ -1,907 +1,1337 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- ========================================
+         META TAGS BÁSICAS
+         ======================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lara Cristian - Estética e Saúde Integrativa</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
+    <!-- ========================================
+         SEO - GOOGLE (Altere conforme necessário)
+         ======================================== -->
+    <title>LC Estética e Saúde Integrativa | Clínica em Águas Claras - DF</title>
+    <meta name="description" content="Clínica de Estética e Saúde Integrativa em Águas Claras. Especializada em Botox, Fios de PDO, Ozonioterapia, Preenchimento e Tratamentos Faciais e Corporais. Agende sua avaliação!">
+    <meta name="keywords" content="estética águas claras, botox brasília, ozonioterapia df, fios de pdo, preenchimento facial, clínica estética brasília, bioestimulador colágeno, tratamento facial águas claras">
+    <meta name="author" content="LC Estética e Saúde Integrativa">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lcsaudeintegrativa.com.br/">
+    
+    <!-- ========================================
+         OPEN GRAPH - META (Facebook/Instagram)
+         Altere a URL da imagem para uma imagem real (1200x630px)
+         ======================================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LC Estética e Saúde Integrativa">
+    <meta property="og:title" content="LC Estética e Saúde Integrativa | Realce sua Beleza Natural">
+    <meta property="og:description" content="Clínica especializada em tratamentos estéticos e saúde integrativa. Botox, Preenchimento, Fios de PDO, Ozonioterapia e mais. Atendimento em Águas Claras - DF.">
+    <meta property="og:url" content="https://www.lcsaudeintegrativa.com.br/">
+    <meta property="og:image" content="https://www.lcsaudeintegrativa.com.br/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="LC Estética e Saúde Integrativa - Clínica em Águas Claras">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LC Estética e Saúde Integrativa">
+    <meta name="twitter:description" content="Realce sua beleza natural com saúde. Tratamentos estéticos e integrativo em Águas Claras - DF.">
+    <meta name="twitter:image" content="https://www.lcsaudeintegrativa.com.br/assets/og-image.jpg">
+    
+    <!-- ========================================
+         FAVICON (Adicione seus próprios ícones)
+         ======================================== -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- ========================================
+         PRECONNECT PARA PERFORMANCE
+         ======================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <style>
-        /* --- 1. Definições Globais --- */
-        :root {
-            --primary-color: #b07d62; /* Tom Terracota */
-            --primary-hover: #966a53;
-            --bg-footer: #2c2a29;     /* Fundo escuro do rodapé */
-            --text-dark: #333333;
-            --text-light: #ffffff;
-            --font-body: 'Poppins', sans-serif;
-            --font-script: 'Great Vibes', cursive; /* Fonte da Logo */
-            --logo-primary: #7a6f63; /* nome */
-            --logo-secondary: #c77a52; /* subtítulo */
-        }
-
-        .brand-logo span.script-name { color: var(--logo-primary); }
-        .brand-logo span.sub-name { color: var(--logo-secondary); }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--text-dark);
-            background-color: #fdfdfd;
-        }
-
-        @font-face {
-            font-family: "Belly Betty";
-            src: url("BellyBetty.ttf") format("truetype");
-            font-weight: 400;
-            font-style: normal;
-        }
-
-
-        /* --- 2. Navbar (Menu Superior) --- */
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.95) !important;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .brand-logo {
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .brand-logo span.script-name {
-            font-family: "Belly Betty", var(--font-script), cursive;
-            font-size: 3.2rem;            /* proporcional ao logo */
-            color: #7a6f63;               /* cor do texto principal */
-            display: block;
-            line-height: 1.1;
-            font-weight: 400;             /* mantém leve como no logo */
-        }
-
-        .brand-logo span.sub-name {
-            font-family: var(--font-body); /* fonte secundária que você usa no site */
-            font-size: 0.8rem;
-            letter-spacing: 3px;          /* igual ao logo */
-            text-transform: uppercase;
-            color: #c77a52;               /* terracota do subtítulo */
-            display: block;
-            margin-top: 0.25rem;
-            font-weight: 600;
-        }
-
-        .navbar-nav .nav-link {
-            color: #555 !important;
-            font-weight: 500;
-            margin-left: 15px;
-            transition: color 0.3s;
-        }
-        
-        .navbar-nav .nav-link:hover {
-            color: var(--primary-color) !important;
-        }
-
-        /* --- 3. Hero Section (Banner Principal) --- */
-        .hero-section {
-            position: relative;
-            background-image: url('https://images.pexels.com/photos/5069455/pexels-photo-5069455.jpeg?auto=compress&cs=tinysrgb&w=1600');
-            background-size: cover;
-            background-position: center;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            color: var(--text-light);
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            font-weight: 300;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-
-        /* --- 4. Botões --- */
-        .btn-custom {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            border: none;
-            padding: 12px 35px;
-            font-weight: 500;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-custom:hover {
-            background-color: var(--primary-hover);
-            color: var(--text-light);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(176, 125, 98, 0.4);
-        }
-
-        /* --- 5. Serviços (Estilos Gerais) --- */
-        .services-section {
-            padding: 80px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-header h2 {
-            color: var(--primary-color);
-            font-weight: 600;
-            font-size: 2.5rem;
-        }
-
-        /* --- 6. Footer (Rodapé) --- */
-        .footer-custom {
-            background-color: var(--bg-footer);
-            color: #fff;
-            padding: 70px 0 30px;
-        }
-
-        .brand-footer {
-            font-family: "Belly Betty";
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-
-        .footer-link {
-            color: #aaa;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-            display: inline-block;
-        }
-
-        .footer-link:hover {
-            color: var(--primary-color);
-        }
-
-        /* Ícones Sociais */
-        .social-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255,255,255,0.1);
-            color: #fff;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            margin-right: 10px;
-        }
-
-        .social-icon:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-3px);
-            color: white;
-        }
-
-        /* Botão WhatsApp no Footer */
-        .btn-whatsapp-footer {
-            background-color: #25D366;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            padding: 10px 25px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            transition: background 0.3s;
-        }
-
-        .btn-whatsapp-footer:hover {
-            background-color: #1ebc57;
-            color: white;
-        }
-
-        /* --- Mobile --- */
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
-            .brand-logo span.script-name { font-size: 1.8rem; }
-            .footer-custom { text-align: center; }
-            .footer-custom .col-md-4 { margin-bottom: 30px; }
-            .social-container { justify-content: center; display: flex; margin-bottom: 15px; }
-        }
-		
-		/* --- Estilos Personalizados da Página de Serviços (Abas e Cards Horizontais) --- */
-		.nav-pills .nav-link {
-			color: #666;
-			background-color: transparent;
-			font-weight: 500;
-			border: 1px solid transparent;
-			transition: all 0.3s ease;
-		}
-
-		.nav-pills .nav-link:hover {
-			color: var(--primary-color);
-			border-color: var(--primary-color);
-		}
-
-		.nav-pills .nav-link.active {
-			background-color: var(--primary-color) !important;
-			color: #fff !important;
-			box-shadow: 0 4px 10px rgba(176, 125, 98, 0.4);
-		}
-
-		.text-primary-custom {
-			color: var(--primary-color);
-			font-weight: 600;
-			font-size: 1.1rem;
-		}
-
-		.btn-outline-custom {
-			color: var(--primary-color);
-			border-color: var(--primary-color);
-			font-weight: 500;
-		}
-
-		.btn-outline-custom:hover {
-			background-color: var(--primary-color);
-			color: #fff;
-		}
-
-		.object-fit-cover {
-			object-fit: cover;
-			width: 100%;
-			height: 100%;
-		}
-		
-		/* Efeito nos cards de depoimento */
-		.testimonial-card {
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-		}
-
-		.testimonial-card:hover {
-			transform: translateY(-5px);
-			box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-		}
-
-		.avatar-placeholder {
-			font-family: var(--font-body);
-			font-size: 1.2rem;
-			border: 2px solid rgba(176, 125, 98, 0.2);
-		}
-    </style>
-
-    <!-- Meta Pixel Code -->
+    <link rel="preconnect" href="https://www.google.com">
+    
+    <!-- ========================================
+         GOOGLE FONTS
+         ======================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Allura&family=Great+Vibes&family=Tangerine:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <!-- ========================================
+         CSS PRINCIPAL
+         ======================================== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- ========================================
+         META PIXEL DO FACEBOOK
+         INSTRUÇÕES: Substitua 'YOUR_PIXEL_ID' pelo seu ID real
+         Exemplo: fbq('init', '1234567890123456');
+         ======================================== -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1603432630980793');
-    fbq('track', 'PageView');
+        // <!-- Meta Pixel Code -->
+        // !function(f,b,e,v,n,t,s)
+        // {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        // n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        // if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        // n.queue=[];t=b.createElement(e);t.async=!0;
+        // t.src=v;s=b.getElementsByTagName(e)[0];
+        // s.parentNode.insertBefore(t,s)}(window, document,'script',
+        // 'https://connect.facebook.net/en_US/fbevents.js');
+        // fbq('init', 'YOUR_PIXEL_ID'); // ← COLE SEU PIXEL ID AQUI
+        // fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1603432630980793&ev=PageView&noscript=1"
-    /></noscript>
+    <noscript>
+        <!-- <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/> -->
+    </noscript>
     <!-- End Meta Pixel Code -->
-
+    
+    <!-- ========================================
+         GOOGLE ANALYTICS (Opcional)
+         INSTRUÇÕES: Substitua 'G-XXXXXXXXXX' pelo seu ID
+         ======================================== -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+    
+    <!-- ========================================
+         SCHEMA MARKUP - JSON-LD (SEO Estruturado)
+         ======================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "LC Estética e Saúde Integrativa",
+      "image": "https://www.lcsaudeintegrativa.com.br/assets/logo.png",
+      "description": "Clínica de Estética e Saúde Integrativa especializada em Botox, Fios de PDO, Ozonioterapia, Preenchimento Facial e Tratamentos Corporais em Águas Claras - DF.",
+      "@id": "https://www.lcsaudeintegrativa.com.br/",
+      "url": "https://www.lcsaudeintegrativa.com.br/",
+      "telephone": "+5561998092709",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Vista Shopping - Q. 101 lote 07 - A",
+        "addressLocality": "Águas Claras",
+        "addressRegion": "DF",
+        "postalCode": "71906-750",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -15.8367,
+        "longitude": -48.0261
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/lcsaudeintegrativa",
+        "https://www.facebook.com/lcsaudeintegrativa"
+      ],
+      "medicalSpecialty": [
+        "Dermatology",
+        "Aesthetic Medicine"
+      ]
+    }
+    </script>
 </head>
 <body>
+    <!-- ========================================
+         BOTÃO WHATSAPP FLUTUANTE
+         ======================================== -->
+    <a href="https://wa.me/5561998092709?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contato via WhatsApp"
+       id="whatsapp-button">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M27.281 4.65C24.281 1.65 20.281 0 16.031 0C7.281 0 0.156 7.125 0.156 15.875C0.156 18.625 0.906 21.281 2.281 23.625L0.031 32L8.656 29.781C10.906 31.031 13.437 31.687 16.031 31.687C24.781 31.687 31.906 24.562 31.906 15.812C31.906 11.562 30.281 7.65 27.281 4.65ZM16.031 29.031C13.687 29.031 11.406 28.406 9.406 27.25L8.906 26.969L3.906 28.219L5.187 23.344L4.875 22.812C3.625 20.719 2.969 18.344 2.969 15.875C2.969 8.687 8.812 2.844 16.031 2.844C19.531 2.844 22.844 4.156 25.312 6.625C27.781 9.094 29.125 12.406 29.125 15.875C29.125 23.062 23.25 29.031 16.031 29.031ZM23.219 19.156C22.812 18.969 20.875 18.031 20.5 17.875C20.125 17.75 19.844 17.688 19.562 18.094C19.281 18.5 18.562 19.375 18.312 19.656C18.094 19.937 17.844 19.969 17.437 19.781C15.5 18.812 14.219 18.062 12.906 15.781C12.562 15.187 13.25 15.219 13.875 14C14 13.719 13.937 13.5 13.844 13.312C13.75 13.125 12.937 11.187 12.594 10.406C12.25 9.656 11.906 9.75 11.656 9.75C11.406 9.75 11.125 9.75 10.844 9.75C10.562 9.75 10.125 9.844 9.75 10.25C9.375 10.656 8.375 11.594 8.375 13.531C8.375 15.469 9.781 17.344 9.969 17.625C10.156 17.906 12.937 22.156 17.156 23.875C19.844 25.062 20.812 25.156 22.062 24.969C22.844 24.844 24.406 24 24.75 23.062C25.094 22.125 25.094 21.344 25 21.187C24.906 21 24.625 20.906 24.219 20.719L23.219 19.156Z" fill="white"/>
+        </svg>
+    </a>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- ========================================
+         HEADER - MENU FIXO
+         ======================================== -->
+    <header class="header" id="header">
         <div class="container">
-            <a class="brand-logo" href="#">
-                <span class="script-name">Lara Cristian</span>
-                <span class="sub-name">Estética e Saúde Integrativa</span>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#localizacao">Localização</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <header id="home" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="row">
-                <div class="col-lg-7">
-                    <h1 class="hero-title">Realce sua beleza natural com saúde</h1>
-                    <p>Na LC Estética e Saúde Integrativa, unimos ciência e naturalidade para cuidar da sua pele, do corpo e do bem-estar.
-                        Somos referência em Ozonioterapia, Botox, Fios de PDO, Terapia Capilar e Terapia Neural. Atendemos em Águas Claras com protocolos exclusivos, olhar humanizado e resultados naturais.
-                        Cuide-se de dentro pra fora!</p>
-                    <a href="https://wa.me/5561998092709" class="btn btn-custom">Agendar Avaliação</a>
+            <nav class="navbar">
+                <!-- Logo -->
+                <div class="logo brand-logo">
+                    <a href="#home" class="logo-link">
+                        <span class="script-name">Lara Cristian</span>
+                        <span class="sub-name">Estética e Saúde Integrativa</span>
+                    </a>
                 </div>
-            </div>
+
+                <!-- Menu Toggle (Mobile) -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu de navegação">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Menu de Navegação -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#localizacao" class="nav-link">Localização</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+
+                <!-- CTA Button -->
+                <a href="#contato" class="btn btn-primary cta-header">Agendar Avaliação</a>
+            </nav>
         </div>
     </header>
 
-    <section id="servicos" class="services-section bg-light py-5">
+    <!-- ========================================
+         HERO SECTION - BANNER PRINCIPAL
+         ======================================== -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
         <div class="container">
-            
-            <div class="section-header text-center mb-5">
-                <h2 class="display-5 fw-bold" style="color: var(--primary-color);">Menu de Tratamentos</h2>
-                <p class="text-muted lead">Protocolos exclusivos de Estética e Saúde Integrativa.</p>
-            </div>
-
-            <ul class="nav nav-pills justify-content-center mb-5" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active rounded-pill px-4 py-2 mx-1" id="pills-faciais-tab" data-bs-toggle="pill" data-bs-target="#pills-faciais" type="button" role="tab">Faciais</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link rounded-pill px-4 py-2 mx-1" id="pills-corporais-tab" data-bs-toggle="pill" data-bs-target="#pills-corporais" type="button" role="tab">Corporais</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link rounded-pill px-4 py-2 mx-1" id="pills-integrativa-tab" data-bs-toggle="pill" data-bs-target="#pills-integrativa" type="button" role="tab">Saúde Integrativa & Capilar</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link rounded-pill px-4 py-2 mx-1" id="pills-recovery-tab" data-bs-toggle="pill" data-bs-target="#pills-recovery" type="button" role="tab">Protocolos com Bota Recovery</button>
-                </li>
-            </ul>
-
-            <div class="tab-content" id="pills-tabContent">
-                
-                <div class="tab-pane fade show active" id="pills-faciais" role="tabpanel">
-                    <div class="row g-4">
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="botox.webp" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Toxina Botulínica (Botox)</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Tratamento de rugas de expressão, marcas na testa, olhos, nariz e pescoço.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Botox." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="bigode-chines.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 317px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Preenchimento Bigode Chinês</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Utilização de ácido hialurônico para suavizar o sulco nasolabial.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Preenchimento." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="bioestimulador.jpeg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Bioestimulador de Colágeno</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Aplicação de substância que estimula a produção natural de colágeno.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Bioestimulador." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Skinbooster</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Hidratação profunda com ácido hialurônico.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Skinbooster." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="fios_pdo.webp" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Fios de PDO</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Lisos, Parafuso ou Espiculados. Estimulam colágeno e promovem lifting facial.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Fios de PDO." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="melasma1.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Melasma & Microagulhamento</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Tratamentos com enzimas despigmentantes e ativos dry delivery.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamentos faciais." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Realce sua Beleza Natural <span class="highlight">com Saúde</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Unimos ciência e naturalidade para cuidar da sua pele, corpo e bem-estar. 
+                    Referência em Ozonioterapia, Botox, Fios de PDO e Tratamentos Integrativos em Águas Claras - DF.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contato" class="btn btn-primary btn-large">Agendar Avaliação Gratuita</a>
+                    <a href="#servicos" class="btn btn-outline btn-large">Conhecer Tratamentos</a>
                 </div>
-
-                <div class="tab-pane fade" id="pills-corporais" role="tabpanel">
-                    <div class="row g-4">
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="gordura-corporal.webp" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Gordura Localizada</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Utilização de enzimas e Corrente Russa para estimulação elétrica.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento para gordura localizada." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="celulite.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Flacidez, Celulite e Estrias</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Aplicação de enzimas lipolíticas ou bioestimulantes.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento corporal." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="papada.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Papada (Queixo Duplo)</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Aplicação de enzimas redutoras de gordura.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento de papada." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <span class="trust-number">500+</span>
+                        <span class="trust-text">Pacientes Atendidos</span>
                     </div>
-                </div>
-
-                <div class="tab-pane fade" id="pills-integrativa" role="tabpanel">
-                    <div class="row g-4">
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="ozonio.png" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Ozonioterapia</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Ações anti-inflamatórias, antimicrobianas, cicatrizantes e imunomoduladoras.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Ozonioterapia." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="ventosa.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Ventosaterapia</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Tratamento de dores crônicas, inflamações e doenças funcionais.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Ventosaterapia." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="terapia-neural.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Terapia Neural</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Equilibra o sistema nervoso e trata dores crônicas com anestésicos locais.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em Terapia Neural." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="https://images.pexels.com/photos/3993444/pexels-photo-3993444.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Alopécia / Queda de Cabelo</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Tratamento para calvície com enzimas e/ou ozonioterapia.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse em tratamento capilar." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="https://images.pexels.com/photos/4056529/pexels-photo-4056529.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 200px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Detox & Nutrição</h5>
-                                            </div>
-                                            <p class="card-text small text-muted">Protocolo de 1 mês para desintoxicação, desinflamação e nutrição.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse no protocolo Detox." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="trust-item">
+                        <span class="trust-number">15+</span>
+                        <span class="trust-text">Tratamentos Especializados</span>
                     </div>
-                </div>
-
-                <div class="tab-pane fade" id="pills-recovery" role="tabpanel">
-                    <div class="mb-4 p-4 bg-white rounded shadow-sm border-start border-4 border-primary-subtle">
-                        <h5 class="text-primary-custom mb-3">Benefícios da Bota de Compressão</h5>
-                        <p class="text-muted small mb-3">As botas de compressão são excelentes para:</p>
-                        <div class="row text-muted small">
-                            <div class="col-md-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Drenagem linfática</li>
-                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Recuperação muscular</li>
-                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Redução de edema</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Relaxamento</li>
-                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Alívio de dores e peso nas pernas</li>
-                                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Auxílio pós-treino e pós-procedimentos</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row g-4">
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="ava.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Protocolo Drenante</h5>
-                                            </div>
-                                            <p class="card-text small text-muted"><strong>Indicação:</strong> Pernas pesadas, inchaço e retenção de líquidos.<br><strong>Tempo:</strong> 20–30 min.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse no Protocolo Drenante." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="ava2.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Protocolo Relaxante</h5>
-                                            </div>
-                                            <p class="card-text small text-muted"><strong>Indicação:</strong> Estresse, tensão e cansaço nas pernas.<br>Pressão leve para relaxamento profundo.</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse no Protocolo Relaxante." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card service-card-horizontal h-100 border-0 shadow-sm">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-4">
-                                        <img src="ava3.jpg" class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 318px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h5 class="card-title mb-0 text-primary-custom">Pós-Liberação Miofascial</h5>
-                                            </div>
-                                            <p class="card-text small text-muted"><strong>Indicação:</strong> Pós liberação. Com Terapia Neural.<br><strong>Tempo:</strong> 15–20 min (suave).</p>
-                                            <a href="https://wa.me/5561998092709?text=Olá, tenho interesse no Protocolo Pós-Liberação." class="btn btn-sm btn-outline-custom mt-2">Agendar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="depoimentos" class="testimonials-section py-5 bg-white">
-        <div class="container">
-            
-            <div class="section-header text-center mb-5">
-                <h2 class="display-5 fw-bold" style="color: var(--primary-color);">O que dizem nossas clientes</h2>
-                <p class="text-muted lead">Histórias reais de quem transformou sua autoestima conosco.</p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm testimonial-card">
-                        <div class="card-body p-4 text-center">
-                            <div class="mb-3 text-warning">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <i class="bi bi-quote fs-1 text-primary-custom mb-3 d-block opacity-25"></i>
-                            <p class="card-text text-muted fst-italic mb-4">"Fiz o Botox com a Dra. Lara e amei o resultado! Ficou super natural, exatamente como eu queria. O atendimento é impecável e o ambiente muito acolhedor."</p>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <div class="avatar-placeholder rounded-circle bg-light d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; color: var(--primary-color); font-weight: bold;">M.S.</div>
-                                <div class="text-start">
-                                    <h6 class="fw-bold mb-0">Mariana Silva</h6>
-                                    <small class="text-muted">Procedimento: Botox</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm testimonial-card">
-                        <div class="card-body p-4 text-center">
-                            <div class="mb-3 text-warning">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <i class="bi bi-quote fs-1 text-primary-custom mb-3 d-block opacity-25"></i>
-                            <p class="card-text text-muted fst-italic mb-4">"Estava sofrendo muito com dores musculares e a Ventosaterapia foi milagrosa. A Dra. tem mãos de fada e explica tudo com muita paciência. Recomendo demais!"</p>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <div class="avatar-placeholder rounded-circle bg-light d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; color: var(--primary-color); font-weight: bold;">C.O.</div>
-                                <div class="text-start">
-                                    <h6 class="fw-bold mb-0">Carla Oliveira</h6>
-                                    <small class="text-muted">Procedimento: Ventosaterapia</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm testimonial-card">
-                        <div class="card-body p-4 text-center">
-                            <div class="mb-3 text-warning">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <i class="bi bi-quote fs-1 text-primary-custom mb-3 d-block opacity-25"></i>
-                            <p class="card-text text-muted fst-italic mb-4">"O preenchimento labial ficou perfeito, deu o volume que eu queria sem ficar exagerado. Profissionalismo e biossegurança nota 10!"</p>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <div class="avatar-placeholder rounded-circle bg-light d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; color: var(--primary-color); font-weight: bold;">F.A.</div>
-                                <div class="text-start">
-                                    <h6 class="fw-bold mb-0">Fernanda Alves</h6>
-                                    <small class="text-muted">Procedimento: Preenchimento</small>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="trust-item">
+                        <span class="trust-number">100%</span>
+                        <span class="trust-text">Satisfação Garantida</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="localizacao" class="py-5 bg-light">
+    <!-- ========================================
+         SEÇÃO: SERVIÇOS / TRATAMENTOS
+         ======================================== -->
+    <section class="section services" id="servicos">
         <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="display-5 fw-bold" style="color: var(--primary-color);">Nossa Localização</h2>
-                <p class="text-muted lead">Venha nos visitar no Vista Shopping.</p>
+            <div class="section-header">
+                <span class="section-tag">Nossos Tratamentos</span>
+                <h2 class="section-title">Protocolos Exclusivos de Estética e Saúde Integrativa</h2>
+                <p class="section-description">
+                    Combinamos técnicas modernas e olhar humanizado para resultados naturais e duradouros.
+                </p>
             </div>
-            <div class="row align-items-center shadow p-4 bg-white rounded">
-                <div class="col-md-5 mb-4 mb-md-0">
-                    <h4 class="mb-3" style="color: var(--primary-color);">Endereço</h4>
-                    <p class="lead text-muted">
-                        <i class="bi bi-geo-alt-fill me-2" style="color: var(--primary-color);"></i>
-                        Vista Shopping - Q. 101 lote 07 - A<br>
-                        Águas Claras, Brasília - DF<br>
-                        CEP: 71906-750
-                    </p>
-                    <p class="text-muted mt-3">
-                        <i class="bi bi-clock me-2"></i> Atendimento com hora marcada.
-                    </p>
-                    <a href="https://www.google.com/maps/search/Vista+Shopping+Águas+Claras" target="_blank" class="btn btn-outline-custom mt-3">Ver no Google Maps</a>
+
+            <!-- Categoria: Faciais -->
+            <div class="services-category">
+                <h3 class="category-title">Tratamentos Faciais</h3>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/botox.webp" 
+                                 alt="Aplicação de Toxina Botulínica (Botox) para tratamento de rugas"
+                                 loading="lazy">
+                            <div class="service-overlay">
+                                <span class="service-badge">Mais Procurado</span>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Toxina Botulínica (Botox)</h4>
+                            <p class="service-description">
+                                Tratamento eficaz de rugas de expressão, linhas na testa, olhos, nariz e pescoço. 
+                                Resultados naturais e duradouros.
+                            </p>
+                            <ul class="service-features">
+                                <li>Redução de rugas dinâmicas</li>
+                                <li>Efeito natural</li>
+                                <li>Procedimento rápido</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20Botox." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/bigode-chines.jpg" 
+                                 alt="Preenchimento de Bigode Chinês com ácido hialurônico"
+                                 loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Preenchimento Bigode Chinês</h4>
+                            <p class="service-description">
+                                Utilização de ácido hialurônico de alta qualidade para suavizar o sulco nasolabial 
+                                e devolver a harmonia facial.
+                            </p>
+                            <ul class="service-features">
+                                <li>Ácido hialurônico premium</li>
+                                <li>Resultado imediato</li>
+                                <li>Rejuvenescimento facial</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20Preenchimento." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/bioestimulador__1_.jpeg" 
+                                 alt="Bioestimulador de Colágeno para rejuvenescimento"
+                                 loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Bioestimulador de Colágeno</h4>
+                            <p class="service-description">
+                                Aplicação de substância biocompatível que estimula a produção natural de colágeno, 
+                                promovendo rejuvenescimento progressivo.
+                            </p>
+                            <ul class="service-features">
+                                <li>Estímulo natural de colágeno</li>
+                                <li>Rejuvenescimento gradual</li>
+                                <li>Resultados duradouros</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20Bioestimulador." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/skin-booster.webp" 
+                                 alt="Skinbooster - Hidratação profunda da pele"
+                                 loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Skinbooster</h4>
+                            <p class="service-description">
+                                Hidratação profunda e intensa com ácido hialurônico de baixo peso molecular. 
+                                Pele luminosa, macia e rejuvenescida.
+                            </p>
+                            <ul class="service-features">
+                                <li>Hidratação profunda</li>
+                                <li>Melhora da textura da pele</li>
+                                <li>Luminosidade natural</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20Skinbooster." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/fios_pdo.webp" 
+                                 alt="Fios de PDO para lifting facial"
+                                 loading="lazy">
+                            <div class="service-overlay">
+                                <span class="service-badge">Destaque</span>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Fios de PDO</h4>
+                            <p class="service-description">
+                                Fios Lisos, Parafuso ou Espiculados que estimulam a produção de colágeno e 
+                                promovem lifting facial sem cirurgia.
+                            </p>
+                            <ul class="service-features">
+                                <li>Lifting sem cirurgia</li>
+                                <li>Estímulo de colágeno</li>
+                                <li>Resultados progressivos</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20Fios%20de%20PDO." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/melasma1.jpg" 
+                                 alt="Tratamento de Melasma com Microagulhamento"
+                                 loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Melasma & Microagulhamento</h4>
+                            <p class="service-description">
+                                Tratamentos avançados com enzimas despigmentantes e ativos dry delivery para 
+                                manchas, melasma e uniformização do tom da pele.
+                            </p>
+                            <ul class="service-features">
+                                <li>Clareamento de manchas</li>
+                                <li>Uniformização do tom</li>
+                                <li>Tecnologia avançada</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20tratamento%20de%20Melasma." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
                 </div>
-                <div class="col-md-7">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://maps.google.com/maps?q=Vista%20Shopping%20Aguas%20Claras&t=&z=15&ie=UTF8&iwloc=&output=embed" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <!-- Categoria: Corporais -->
+            <div class="services-category">
+                <h3 class="category-title">Tratamentos Corporais</h3>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/gordura-corporal.webp" 
+                                 alt="Tratamento para Gordura Localizada"
+                                 loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Gordura Localizada</h4>
+                            <p class="service-description">
+                                Utilização de enzimas lipolíticas e Corrente Russa para estimulação elétrica. 
+                                Redução de medidas e modelagem corporal.
+                            </p>
+                            <ul class="service-features">
+                                <li>Redução de medidas</li>
+                                <li>Modelagem corporal</li>
+                                <li>Tecnologia avançada</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20tratamento%20para%20gordura%20localizada." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/celulite.jpg" 
+                                 alt="Tratamento de Flacidez, Celulite e Estrias"
+                                 loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Flacidez, Celulite e Estrias</h4>
+                            <p class="service-description">
+                                Aplicação de enzimas lipolíticas ou bioestimulantes para tratamento de celulite, 
+                                flacidez e estrias com resultados visíveis.
+                            </p>
+                            <ul class="service-features">
+                                <li>Redução de celulite</li>
+                                <li>Firmeza da pele</li>
+                                <li>Melhora das estrias</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20tratamento%20corporal." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/papada.jpg" 
+                                 alt="Tratamento de Papada (Queixo Duplo)"
+                                 loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Papada (Queixo Duplo)</h4>
+                            <p class="service-description">
+                                Aplicação de enzimas redutoras de gordura específicas para a região submentoniana. 
+                                Contorno facial definido.
+                            </p>
+                            <ul class="service-features">
+                                <li>Redução da papada</li>
+                                <li>Contorno definido</li>
+                                <li>Sem cirurgia</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20tratamento%20de%20papada." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Categoria: Saúde Integrativa -->
+            <div class="services-category">
+                <h3 class="category-title">Saúde Integrativa & Capilar</h3>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/ozonio.png" 
+                                 alt="Ozonioterapia - Tratamento integrativo"
+                                 loading="lazy">
+                            <div class="service-overlay">
+                                <span class="service-badge">Exclusivo</span>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Ozonioterapia</h4>
+                            <p class="service-description">
+                                Terapia com ozônio medicinal com ações anti-inflamatórias, antimicrobianas, 
+                                cicatrizantes e imunomoduladoras. Tratamento de diversas condições.
+                            </p>
+                            <ul class="service-features">
+                                <li>Anti-inflamatório natural</li>
+                                <li>Imunomodulação</li>
+                                <li>Cicatrização acelerada</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20Ozonioterapia." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/ventosa.jpg" 
+                                 alt="Ventosaterapia - Tratamento de dores"
+                                 loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Ventosaterapia</h4>
+                            <p class="service-description">
+                                Tratamento eficaz de dores crônicas, inflamações e doenças funcionais através 
+                                da terapia por ventosas.
+                            </p>
+                            <ul class="service-features">
+                                <li>Alívio de dores</li>
+                                <li>Melhora circulação</li>
+                                <li>Relaxamento muscular</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20Ventosaterapia." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/terapia-neural.jpg" 
+                                 alt="Terapia Neural para dores crônicas"
+                                 loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Terapia Neural</h4>
+                            <p class="service-description">
+                                Técnica que equilibra o sistema nervoso autônomo e trata dores crônicas através 
+                                de anestésicos locais em pontos específicos.
+                            </p>
+                            <ul class="service-features">
+                                <li>Tratamento de dor crônica</li>
+                                <li>Equilíbrio neurológico</li>
+                                <li>Resultados duradouros</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20Terapia%20Neural." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/alopecia.jpeg" 
+                                 alt="Tratamento Capilar - Alopécia e Queda de Cabelo"
+                                 loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Tratamento Capilar (Alopécia)</h4>
+                            <p class="service-description">
+                                Tratamento especializado para calvície, alopécia e queda de cabelo com 
+                                enzimas bioestimulantes e/ou ozonioterapia.
+                            </p>
+                            <ul class="service-features">
+                                <li>Estímulo do crescimento</li>
+                                <li>Fortalecimento capilar</li>
+                                <li>Redução da queda</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20em%20tratamento%20capilar." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img src="images/detox-nutricao.webp" 
+                                 alt="Protocolo Detox e Nutrição"
+                                 loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h4 class="service-title">Detox & Nutrição</h4>
+                            <p class="service-description">
+                                Protocolo intensivo de 1 mês para desintoxicação, desinflamação e nutrição celular. 
+                                Bem-estar completo de dentro para fora.
+                            </p>
+                            <ul class="service-features">
+                                <li>Desintoxicação profunda</li>
+                                <li>Nutrição celular</li>
+                                <li>Aumento de energia</li>
+                            </ul>
+                            <a href="https://wa.me/5561998092709?text=Olá!%20Tenho%20interesse%20no%20protocolo%20Detox." 
+                               class="btn btn-secondary">
+                                Agendar Consulta
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- CTA no final dos serviços -->
+            <div class="section-cta">
+                <h3>Não encontrou o tratamento que procura?</h3>
+                <p>Entre em contato conosco para uma avaliação personalizada.</p>
+                <a href="#contato" class="btn btn-primary btn-large">Falar com Especialista</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO: BENEFÍCIOS DA CLÍNICA
+         ======================================== -->
+    <section class="section benefits" id="beneficios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Por Que Escolher a LC?</span>
+                <h2 class="section-title">Benefícios de Cuidar da Sua Beleza Conosco</h2>
+                <p class="section-description">
+                    Combinamos expertise técnica, tecnologia de ponta e atendimento humanizado para 
+                    resultados que vão além da estética.
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Protocolos Exclusivos</h3>
+                    <p class="benefit-description">
+                        Tratamentos personalizados e exclusivos, desenvolvidos especificamente para suas 
+                        necessidades individuais.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Atendimento Humanizado</h3>
+                    <p class="benefit-description">
+                        Cuidado integral e atencioso em cada etapa do seu tratamento. Você é único e 
+                        merece atenção especial.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Resultados Naturais</h3>
+                    <p class="benefit-description">
+                        Acreditamos em realçar sua beleza natural, sem exageros. Resultados harmoniosos 
+                        e que respeitam suas características.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Tecnologia de Ponta</h3>
+                    <p class="benefit-description">
+                        Equipamentos modernos e técnicas avançadas para garantir eficácia, segurança e 
+                        conforto em todos os procedimentos.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Acompanhamento Completo</h3>
+                    <p class="benefit-description">
+                        Suporte contínuo antes, durante e depois dos tratamentos. Estamos ao seu lado em 
+                        toda a jornada de transformação.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Profissional Especializada</h3>
+                    <p class="benefit-description">
+                        Expertise e formação continuada em estética e saúde integrativa para oferecer o 
+                        melhor cuidado possível.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Diferenciais Adicionais -->
+            <div class="extra-benefits">
+                <h3 class="extra-benefits-title">Além disso, você conta com:</h3>
+                <div class="extra-benefits-list">
+                    <div class="extra-benefit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Ambiente confortável e acolhedor</span>
+                    </div>
+                    <div class="extra-benefit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Produtos e insumos de alta qualidade</span>
+                    </div>
+                    <div class="extra-benefit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Localização privilegiada no Vista Shopping</span>
+                    </div>
+                    <div class="extra-benefit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Horários flexíveis e atendimento personalizado</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contato" class="footer-custom">
+    <!-- ========================================
+         SEÇÃO: DEPOIMENTOS (CARROSSEL)
+         ======================================== -->
+    <section class="section testimonials" id="depoimentos">
         <div class="container">
-            <div class="row align-items-center">
-                
-                <div class="col-md-4 text-center text-md-start">
-                    <div class="brand-footer">Lara Cristian</div>
-                    <p class="text-white small mb-3">Excelência em estética integrativa.<br>Cuidando de você de dentro para fora.</p>
-                    <p class="text-white-50 small">
-                        <i class="bi bi-geo-alt me-1"></i> Vista Shopping - Águas Claras, DF
+            <div class="section-header">
+                <span class="section-tag">Depoimentos</span>
+                <h2 class="section-title">O Que Dizem Nossas Pacientes</h2>
+                <p class="section-description">
+                    Histórias reais de transformação, autoestima e bem-estar.
+                </p>
+            </div>
+
+            <div class="testimonials-carousel">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <!-- Depoimento 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Fiz o Botox com a Dra. Lara e amei o resultado! Ficou super natural, exatamente 
+                            como eu queria. O atendimento é impecável e o ambiente muito acolhedor. 
+                            Recomendo de olhos fechados!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M.S.</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Mariana Silva</h4>
+                                <p class="author-treatment">Toxina Botulínica (Botox)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Estava sofrendo muito com dores musculares e a Ventosaterapia foi milagrosa. 
+                            A Dra. tem mãos de fada e explica tudo com muita paciência. Sinto uma diferença 
+                            enorme na minha qualidade de vida. Gratidão!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">C.O.</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Carla Oliveira</h4>
+                                <p class="author-treatment">Ventosaterapia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "O preenchimento labial ficou perfeito, deu o volume que eu queria sem ficar 
+                            exagerado. Profissionalismo e biossegurança nota 10! Já indiquei para várias 
+                            amigas e todas adoraram também."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">F.A.</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Fernanda Alves</h4>
+                                <p class="author-treatment">Preenchimento Facial</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Os Fios de PDO superaram minhas expectativas! O resultado é progressivo e muito 
+                            natural. A Dra. Lara é extremamente cuidadosa e atenciosa. Voltei a me sentir 
+                            confiante e linda!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">J.M.</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Juliana Mendes</h4>
+                                <p class="author-treatment">Fios de PDO</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "A Ozonioterapia mudou minha vida! Tinha problemas de imunidade e inflamações 
+                            constantes. Depois do tratamento, me sinto renovada. É incrível como a saúde 
+                            integrativa faz diferença!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">R.S.</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Roberta Santos</h4>
+                                <p class="author-treatment">Ozonioterapia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles do Carrossel -->
+                <button class="carousel-btn carousel-prev" id="prevBtn" aria-label="Depoimento anterior">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-next" id="nextBtn" aria-label="Próximo depoimento">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Indicadores -->
+                <div class="carousel-indicators" id="carouselIndicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO: SOBRE A CLÍNICA / PROFISSIONAL
+         ======================================== -->
+    <section class="section about" id="sobre">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/3952048/pexels-photo-3952048.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         alt="Dra. Lara Cristian - Estética e Saúde Integrativa"
+                         loading="lazy">
+                    <div class="about-badge">
+                        <span class="badge-number">8+</span>
+                        <span class="badge-text">Anos de Experiência</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-tag">Sobre Nós</span>
+                    <h2 class="section-title">Lara Cristian<br>Estética e Saúde Integrativa</h2>
+                    <p class="about-description">
+                        Na <strong>LC Estética e Saúde Integrativa</strong>, acreditamos que a verdadeira 
+                        beleza vem de dentro. Por isso, unimos ciência, naturalidade e cuidado humanizado 
+                        para cuidar não apenas da sua pele e do seu corpo, mas também do seu bem-estar integral.
                     </p>
-                </div>
+                    <p class="about-description">
+                        Somos <strong>referência em Ozonioterapia, Botox, Fios de PDO, Terapia Capilar e 
+                        Terapia Neural</strong> em Águas Claras - DF. Nossos protocolos exclusivos são 
+                        desenvolvidos individualmente, respeitando suas características únicas e objetivos 
+                        pessoais.
+                    </p>
+                    <p class="about-description">
+                        Com <strong>mais de 8 anos de experiência</strong> e formação continuada nas mais 
+                        modernas técnicas de estética e saúde integrativa, a Dra. Lara Cristian oferece 
+                        atendimento personalizado, seguro e com resultados naturais.
+                    </p>
 
-                <div class="col-md-4 text-center">
-                    <a href="#home" class="footer-link">Home</a>
-                    <a href="#servicos" class="footer-link">Serviços</a>
-                    <a href="#depoimentos" class="footer-link">Depoimentos</a>
-                    <a href="#localizacao" class="footer-link">Localização</a>
-                </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <div>
+                                <h4>Formação Especializada</h4>
+                                <p>Pós-graduação em Estética Integrativa e cursos nas melhores instituições</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <div>
+                                <h4>Abordagem Integrativa</h4>
+                                <p>Visão holística que trata corpo, mente e bem-estar</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <div>
+                                <h4>Resultados Comprovados</h4>
+                                <p>Mais de 500 pacientes satisfeitos e transformados</p>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="col-md-4 text-center text-md-end mt-4 mt-md-0">
-                    <div class="social-container mb-3">
-                        <a href="https://instagram.com/lc_esteticaintegrativa" target="_blank" class="social-icon" title="Instagram">
-                            <i class="bi bi-instagram"></i>
+                    <div class="about-cta">
+                        <a href="#contato" class="btn btn-primary">Conhecer Nossa Estrutura</a>
+                        <a href="https://wa.me/5561998092709?text=Olá!%20Gostaria%20de%20conhecer%20mais%20sobre%20a%20clínica." 
+                           class="btn btn-outline">
+                            Falar com a Dra. Lara
                         </a>
-                        <a href="mailto:contato@laracristian.com" class="social-icon" title="E-mail">
-                            <i class="bi bi-envelope"></i>
-                        </a>
                     </div>
-                    
-                    <a href="https://wa.me/5561998092709" target="_blank" class="btn-whatsapp-footer">
-                        <i class="bi bi-whatsapp me-2"></i> Agendar pelo WhatsApp
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO: LOCALIZAÇÃO
+         ======================================== -->
+    <section class="section location" id="localizacao">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Localização</span>
+                <h2 class="section-title">Venha Nos Visitar</h2>
+                <p class="section-description">
+                    Estamos localizados no Vista Shopping, em Águas Claras - DF. 
+                    Fácil acesso e estacionamento disponível.
+                </p>
+            </div>
+
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h3>Endereço</h3>
+                            <p>Vista Shopping - Q. 101 lote 07 - A<br>
+                               Águas Claras, Brasília - DF<br>
+                               CEP: 71906-750</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h3>Contato</h3>
+                            <p>
+                                <a href="tel:+5561998092709">(61) 99809-2709</a><br>
+                                <a href="/cdn-cgi/l/email-protection#781b17160c190c1738141b0b190d1c1d11160c1d1f0a190c110e19561b1715561a0a"><span class="__cf_email__" data-cfemail="3754585943564358775b5444564253525e594352504556435e41561954585a195545">[email&#160;protected]</span></a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 08:00 - 18:00<br>
+                               Atendimento com hora marcada</p>
+                        </div>
+                    </div>
+
+                    <a href="https://www.google.com/maps/search/Vista+Shopping+Águas+Claras" 
+                       class="btn btn-primary btn-large" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Ver no Google Maps
                     </a>
                 </div>
+
+                <div class="location-map">
+                    <!-- Google Maps Embed -->
+                    <!-- INSTRUÇÕES: Substitua o src abaixo pelo embed correto do Google Maps -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.1547895895!2d-48.028364!3d-15.836687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a30e1e0000001%3A0x1!2sVista%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Localização da LC Estética e Saúde Integrativa no mapa">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO: AGENDAMENTO / CONTATO
+         ======================================== -->
+    <section class="section contact" id="contato">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-content">
+                    <span class="section-tag">Entre em Contato</span>
+                    <h2 class="section-title">Agende Sua Avaliação Gratuita</h2>
+                    <p class="contact-description">
+                        Preencha o formulário abaixo ou entre em contato diretamente pelo WhatsApp. 
+                        Vamos te ajudar a encontrar o melhor tratamento para você!
+                    </p>
+
+                    <div class="contact-benefits">
+                        <div class="contact-benefit">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Avaliação gratuita e sem compromisso</span>
+                        </div>
+                        <div class="contact-benefit">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Resposta em até 24 horas</span>
+                        </div>
+                        <div class="contact-benefit">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Atendimento personalizado</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-alternative">
+                        <p><strong>Prefere WhatsApp?</strong></p>
+                        <a href="https://wa.me/5561998092709?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." 
+                           class="btn btn-whatsapp"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                                <path d="M27.281 4.65C24.281 1.65 20.281 0 16.031 0C7.281 0 0.156 7.125 0.156 15.875C0.156 18.625 0.906 21.281 2.281 23.625L0.031 32L8.656 29.781C10.906 31.031 13.437 31.687 16.031 31.687C24.781 31.687 31.906 24.562 31.906 15.812C31.906 11.562 30.281 7.65 27.281 4.65ZM16.031 29.031C13.687 29.031 11.406 28.406 9.406 27.25L8.906 26.969L3.906 28.219L5.187 23.344L4.875 22.812C3.625 20.719 2.969 18.344 2.969 15.875C2.969 8.687 8.812 2.844 16.031 2.844C19.531 2.844 22.844 4.156 25.312 6.625C27.781 9.094 29.125 12.406 29.125 15.875C29.125 23.062 23.25 29.031 16.031 29.031ZM23.219 19.156C22.812 18.969 20.875 18.031 20.5 17.875C20.125 17.75 19.844 17.688 19.562 18.094C19.281 18.5 18.562 19.375 18.312 19.656C18.094 19.937 17.844 19.969 17.437 19.781C15.5 18.812 14.219 18.062 12.906 15.781C12.562 15.187 13.25 15.219 13.875 14C14 13.719 13.937 13.5 13.844 13.312C13.75 13.125 12.937 11.187 12.594 10.406C12.25 9.656 11.906 9.75 11.656 9.75C11.406 9.75 11.125 9.75 10.844 9.75C10.562 9.75 10.125 9.844 9.75 10.25C9.375 10.656 8.375 11.594 8.375 13.531C8.375 15.469 9.781 17.344 9.969 17.625C10.156 17.906 12.937 22.156 17.156 23.875C19.844 25.062 20.812 25.156 22.062 24.969C22.844 24.844 24.406 24 24.75 23.062C25.094 22.125 25.094 21.344 25 21.187C24.906 21 24.625 20.906 24.219 20.719L23.219 19.156Z" fill="currentColor"/>
+                            </svg>
+                            Falar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required 
+                                placeholder="Digite seu nome completo">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefone / WhatsApp *</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    required 
+                                    placeholder="(00) 00000-0000">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required 
+                                    placeholder="seu@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="treatment">Tratamento de Interesse (Opcional)</label>
+                            <select id="treatment" name="treatment">
+                                <option value="">Selecione um tratamento</option>
+                                <option value="botox">Toxina Botulínica (Botox)</option>
+                                <option value="preenchimento">Preenchimento Facial</option>
+                                <option value="bioestimulador">Bioestimulador de Colágeno</option>
+                                <option value="skinbooster">Skinbooster</option>
+                                <option value="fios-pdo">Fios de PDO</option>
+                                <option value="melasma">Melasma / Microagulhamento</option>
+                                <option value="gordura">Gordura Localizada</option>
+                                <option value="celulite">Flacidez / Celulite / Estrias</option>
+                                <option value="papada">Papada</option>
+                                <option value="ozonioterapia">Ozonioterapia</option>
+                                <option value="ventosaterapia">Ventosaterapia</option>
+                                <option value="terapia-neural">Terapia Neural</option>
+                                <option value="capilar">Tratamento Capilar</option>
+                                <option value="detox">Detox & Nutrição</option>
+                                <option value="outro">Outro / Avaliação Geral</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem (Opcional)</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="4" 
+                                placeholder="Conte-nos um pouco sobre o que você procura ou suas dúvidas..."></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <span>Eu concordo em receber comunicações da LC Estética e Saúde Integrativa *</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-block">
+                            Enviar Solicitação
+                        </button>
+
+                        <p class="form-note">
+                            * Campos obrigatórios. Seus dados estão seguros e não serão compartilhados.
+                        </p>
+                    </form>
+
+                    <!-- Mensagem de Sucesso -->
+                    <div class="form-success" id="formSuccess">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <h3>Mensagem Enviada com Sucesso!</h3>
+                        <p>Obrigada pelo contato! Em breve retornaremos sua solicitação.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER - RODAPÉ
+         ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo e Descrição -->
+                <div class="footer-col footer-about">
+                    <div class="footer-logo brand-logo">
+                        <span class="script-name">Lara Cristian</span>
+                        <span class="sub-name">Estética e Saúde Integrativa</span>
+                    </div>
+                    <p class="footer-description">
+                        Cuidando de você de dentro para fora. Excelência em estética integrativa 
+                        com resultados naturais e duradouros.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/lcsaudeintegrativa" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/lcsaudeintegrativa" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/5561998092709" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="WhatsApp">
+                            <svg width="24" height="24" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M27.281 4.65C24.281 1.65 20.281 0 16.031 0C7.281 0 0.156 7.125 0.156 15.875C0.156 18.625 0.906 21.281 2.281 23.625L0.031 32L8.656 29.781C10.906 31.031 13.437 31.687 16.031 31.687C24.781 31.687 31.906 24.562 31.906 15.812C31.906 11.562 30.281 7.65 27.281 4.65ZM16.031 29.031C13.687 29.031 11.406 28.406 9.406 27.25L8.906 26.969L3.906 28.219L5.187 23.344L4.875 22.812C3.625 20.719 2.969 18.344 2.969 15.875C2.969 8.687 8.812 2.844 16.031 2.844C19.531 2.844 22.844 4.156 25.312 6.625C27.781 9.094 29.125 12.406 29.125 15.875C29.125 23.062 23.25 29.031 16.031 29.031ZM23.219 19.156C22.812 18.969 20.875 18.031 20.5 17.875C20.125 17.75 19.844 17.688 19.562 18.094C19.281 18.5 18.562 19.375 18.312 19.656C18.094 19.937 17.844 19.969 17.437 19.781C15.5 18.812 14.219 18.062 12.906 15.781C12.562 15.187 13.25 15.219 13.875 14C14 13.719 13.937 13.5 13.844 13.312C13.75 13.125 12.937 11.187 12.594 10.406C12.25 9.656 11.906 9.75 11.656 9.75C11.406 9.75 11.125 9.75 10.844 9.75C10.562 9.75 10.125 9.844 9.75 10.25C9.375 10.656 8.375 11.594 8.375 13.531C8.375 15.469 9.781 17.344 9.969 17.625C10.156 17.906 12.937 22.156 17.156 23.875C19.844 25.062 20.812 25.156 22.062 24.969C22.844 24.844 24.406 24 24.75 23.062C25.094 22.125 25.094 21.344 25 21.187C24.906 21 24.625 20.906 24.219 20.719L23.219 19.156Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links Rápidos -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#beneficios">Benefícios</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tratamentos Populares -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Tratamentos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicos">Botox</a></li>
+                        <li><a href="#servicos">Preenchimento Facial</a></li>
+                        <li><a href="#servicos">Fios de PDO</a></li>
+                        <li><a href="#servicos">Ozonioterapia</a></li>
+                        <li><a href="#servicos">Ventosaterapia</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contato -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Contato</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Vista Shopping, Águas Claras - DF</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <a href="tel:+5561998092709">(61) 99809-2709</a>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Seg - Sex: 08:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
-
-            <div class="row">
-                <div class="col text-center">
-                    <p class="text-white-50 small">© 2025 Lara Cristian - Estética Integrativa. Todos os direitos reservados.</p>
-                </div>
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 LC Estética e Saúde Integrativa. Todos os direitos reservados.</p>
+                <p class="footer-dev">
+                    Desenvolvido com 
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    por <a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer">Claude AI</a>
+                </p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <!-- ================
