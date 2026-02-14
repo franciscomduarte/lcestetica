@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1603432630980793');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1603432630980793&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
     <!-- ========================================
          META TAGS BÁSICAS
          ======================================== -->
@@ -88,37 +70,37 @@ src="https://www.facebook.com/tr?id=1603432630980793&ev=PageView&noscript=1"
          INSTRUÇÕES: Substitua 'YOUR_PIXEL_ID' pelo seu ID real
          Exemplo: fbq('init', '1234567890123456');
          ======================================== -->
-    <script>
-        // <!-- Meta Pixel Code -->
-        // !function(f,b,e,v,n,t,s)
-        // {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        // n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        // if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        // n.queue=[];t=b.createElement(e);t.async=!0;
-        // t.src=v;s=b.getElementsByTagName(e)[0];
-        // s.parentNode.insertBefore(t,s)}(window, document,'script',
-        // 'https://connect.facebook.net/en_US/fbevents.js');
-        // fbq('init', 'YOUR_PIXEL_ID'); // ← COLE SEU PIXEL ID AQUI
-        // fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <!-- <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/> -->
-    </noscript>
+    <!-- Meta Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1603432630980793');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1603432630980793&ev=PageView&noscript=1"
+        /></noscript>
     <!-- End Meta Pixel Code -->
     
     <!-- ========================================
          GOOGLE ANALYTICS (Opcional)
          INSTRUÇÕES: Substitua 'G-XXXXXXXXXX' pelo seu ID
          ======================================== -->
-    <!--
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+        gtag('config', 'G-VSH348ZRZS');
     </script>
-    -->
+    
     
     <!-- ========================================
          SCHEMA MARKUP - JSON-LD (SEO Estruturado)
@@ -227,32 +209,75 @@ src="https://www.facebook.com/tr?id=1603432630980793&ev=PageView&noscript=1"
          HERO SECTION - BANNER PRINCIPAL
          ======================================== -->
     <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Realce sua Beleza Natural <span class="highlight">com Saúde</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Unimos ciência e naturalidade para cuidar da sua pele, corpo e bem-estar. 
-                    Referência em Ozonioterapia, Botox, Fios de PDO e Tratamentos Integrativos em Águas Claras - DF.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contato" class="btn btn-primary btn-large">Agendar Avaliação Gratuita</a>
-                    <a href="#servicos" class="btn btn-outline btn-large">Conhecer Tratamentos</a>
+        <div class="hero-container">
+            <div class="hero-content-wrapper">
+                <div class="hero-text-content">
+                    <div class="hero-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                        <span>Clínica Especializada em Águas Claras</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Realce sua <span class="highlight">Beleza Natural</span> com Saúde
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Unimos ciência e naturalidade para cuidar da sua pele, corpo e bem-estar. 
+                        Especialistas em Ozonioterapia, Botox, Fios de PDO e Tratamentos Integrativos.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#contato" class="btn btn-primary btn-large">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                            Agendar Avaliação Gratuita
+                        </a>
+                        <a href="#servicos" class="btn btn-outline-dark btn-large">
+                            Conhecer Tratamentos
+                        </a>
+                    </div>
+                    
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <span class="trust-number">500+</span>
+                            <span class="trust-text">Pacientes Atendidos</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-number">15+</span>
+                            <span class="trust-text">Tratamentos</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-number">100%</span>
+                            <span class="trust-text">Satisfação</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-trust">
-                    <div class="trust-item">
-                        <span class="trust-number">500+</span>
-                        <span class="trust-text">Pacientes Atendidos</span>
+                
+                <div class="hero-image-content">
+                    <div class="hero-image-wrapper">
+                        <img src="images/dra-lara-cristian.jpeg" 
+                             alt="Dra. Lara Cristian - Especialista em Estética e Saúde Integrativa"
+                             class="hero-image">
+                        <div class="hero-image-decoration"></div>
                     </div>
-                    <div class="trust-item">
-                        <span class="trust-number">15+</span>
-                        <span class="trust-text">Tratamentos Especializados</span>
-                    </div>
-                    <div class="trust-item">
-                        <span class="trust-number">100%</span>
-                        <span class="trust-text">Satisfação Garantida</span>
+                    
+                    <div class="hero-floating-card">
+                        <div class="floating-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div class="floating-card-content">
+                            <span class="floating-card-title">Dra. Lara Cristian</span>
+                            <span class="floating-card-subtitle">Estética & Saúde Integrativa</span>
+                        </div>
                     </div>
                 </div>
             </div>
