@@ -345,6 +345,21 @@ ul, ol {
     align-items: center;
     justify-content: space-between;
     padding: var(--spacing-sm) 0;
+    gap: var(--spacing-md);
+}
+
+/* Logo ocupa espaço flexível, menu-toggle fica fixo à direita */
+.navbar .brand-logo {
+    flex: 1;
+    min-width: 0; /* Permite que a logo encolha */
+}
+
+.navbar .menu-toggle {
+    flex-shrink: 0; /* Menu toggle não encolhe */
+}
+
+.navbar .nav-menu {
+    flex-shrink: 0;
 }
 
 /* Logo - Estilo Brand */
@@ -396,24 +411,38 @@ a .brand-logo span.sub-name {
 
 /* Responsive Logo */
 @media (max-width: 768px) {
-    .brand-logo span.script-name {
-        font-size: 2.5rem !important;
+    .brand-logo span.script-name,
+    .navbar .brand-logo span.script-name {
+        font-size: 1.75rem !important;
     }
     
     .brand-logo span.sub-name {
-        font-size: 0.65rem !important;
-        letter-spacing: 2.5px !important;
+        font-size: 0.5rem !important;
+        letter-spacing: 1.5px !important;
     }
 }
 
 @media (max-width: 480px) {
-    .brand-logo span.script-name {
-        font-size: 2rem !important;
+    .brand-logo span.script-name,
+    .navbar .brand-logo span.script-name {
+        font-size: 1.5rem !important;
     }
     
     .brand-logo span.sub-name {
-        font-size: 0.55rem !important;
-        letter-spacing: 2px !important;
+        font-size: 0.45rem !important;
+        letter-spacing: 1.2px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .brand-logo span.script-name,
+    .navbar .brand-logo span.script-name {
+        font-size: 1.3rem !important;
+    }
+    
+    .brand-logo span.sub-name {
+        font-size: 0.4rem !important;
+        letter-spacing: 1px !important;
     }
 }
 
@@ -538,6 +567,15 @@ a .brand-logo span.sub-name {
 
 /* Mobile Menu */
 @media (max-width: 1024px) {
+    /* Ajuste do container do header em mobile */
+    .header .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .navbar {
+        padding: var(--spacing-xs) 0;
+    }
+    
     .menu-toggle {
         display: flex;
     }
@@ -572,6 +610,32 @@ a .brand-logo span.sub-name {
         margin-left: 0;
         margin-top: var(--spacing-md);
         justify-content: center;
+    }
+}
+
+/* Ajustes extras para mobile pequeno */
+@media (max-width: 480px) {
+    .header .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .menu-toggle {
+        width: 28px;
+        height: 22px;
+    }
+    
+    .menu-toggle span {
+        height: 2.5px;
+    }
+}
+
+@media (max-width: 360px) {
+    .header .container {
+        padding: 0 0.75rem;
     }
 }
 
