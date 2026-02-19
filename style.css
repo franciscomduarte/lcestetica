@@ -608,11 +608,41 @@ a .brand-logo span.sub-name {
         align-items: flex-start;
         gap: 0;
         padding: 100px var(--spacing-lg) var(--spacing-lg);
-        transition: right var(--transition-base);
+        transition: right 0.3s ease;
+        z-index: 1001;
+        overflow-y: auto;
+    }
+    
+    .nav-menu > * {
+        position: relative;
+        z-index: 1;
     }
     
     .nav-menu.active {
         right: 0;
+    }
+    
+    /* Overlay escuro quando menu aberto - ATRÁS do menu */
+    .nav-menu::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 280px; /* Não cobre o menu */
+        width: calc(100vw - 280px);
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: -1; /* Atrás do menu */
+        pointer-events: none;
+    }
+    
+    .nav-menu.active::before {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
     
     /* Logo dentro do menu mobile */
@@ -622,6 +652,8 @@ a .brand-logo span.sub-name {
         margin-bottom: var(--spacing-lg);
         border-bottom: 1px solid var(--color-gray-200);
         list-style: none;
+        position: relative;
+        z-index: 10;
     }
     
     .mobile-logo .brand-logo {
@@ -650,6 +682,13 @@ a .brand-logo span.sub-name {
         width: 100%;
         padding: var(--spacing-sm) 0;
         font-size: var(--font-lg);
+        position: relative;
+        z-index: 10;
+    }
+    
+    .nav-menu > li {
+        position: relative;
+        z-index: 10;
     }
     
     .cta-header {
