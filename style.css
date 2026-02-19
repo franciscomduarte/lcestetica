@@ -503,6 +503,11 @@ a .brand-logo span.sub-name {
     gap: var(--spacing-lg);
 }
 
+/* Ocultar logo mobile no desktop */
+.mobile-logo {
+    display: none;
+}
+
 .nav-link {
     font-size: var(--font-sm);
     font-weight: 500;
@@ -568,12 +573,23 @@ a .brand-logo span.sub-name {
 /* Mobile Menu */
 @media (max-width: 1024px) {
     /* Ajuste do container do header em mobile */
+    .header {
+        min-height: 60px;
+    }
+    
     .header .container {
         padding: 0 var(--spacing-md);
     }
     
     .navbar {
-        padding: var(--spacing-xs) 0;
+        padding: var(--spacing-sm) 0;
+        justify-content: flex-end; /* Menu toggle à direita */
+        min-height: 60px;
+    }
+    
+    /* OCULTAR LOGO NO MOBILE */
+    .navbar .brand-logo {
+        display: none !important;
     }
     
     .menu-toggle {
@@ -597,6 +613,37 @@ a .brand-logo span.sub-name {
     
     .nav-menu.active {
         right: 0;
+    }
+    
+    /* Logo dentro do menu mobile */
+    .mobile-logo {
+        width: 100%;
+        padding-bottom: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+        border-bottom: 1px solid var(--color-gray-200);
+        list-style: none;
+    }
+    
+    .mobile-logo .brand-logo {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .mobile-logo .script-name {
+        font-family: "Belly Betty", "Great Vibes", "Allura", cursive !important;
+        font-size: 2rem !important;
+        color: #7a6f63 !important;
+        line-height: 1.1 !important;
+    }
+    
+    .mobile-logo .sub-name {
+        font-family: var(--font-body) !important;
+        font-size: 0.6rem !important;
+        letter-spacing: 2px !important;
+        text-transform: uppercase !important;
+        color: #c77a52 !important;
+        margin-top: 0.25rem !important;
     }
     
     .nav-link {
