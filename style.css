@@ -2108,3 +2108,183 @@ a .brand-logo span.sub-name {
 .mt-2 { margin-top: var(--spacing-sm); }
 .mt-3 { margin-top: var(--spacing-md); }
 .mt-4 { margin-top: var(--spacing-lg); }
+
+/* ========================================
+   DESIGN EDITORIAL — ÂNCORA DIFERENCIADORA
+   Regra dourada + tipografia premium para páginas internas
+   ======================================== */
+
+/* Regra editorial: linha dourada antes de cada section-tag em páginas internas */
+.service-page-hero .hero-badge span,
+.page-editorial .section-tag {
+    position: relative;
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+.page-editorial .section-tag::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.5rem;
+    height: 2px;
+    background: var(--color-primary);
+}
+
+/* H1 das páginas de serviço — Playfair italic nos destaques */
+.service-page-hero .hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.service-page-hero .hero-title .highlight {
+    font-style: italic;
+    display: block;
+    font-size: 0.9em;
+}
+
+/* Imagem hero com border-radius assimétrico — marca visual da clínica */
+.service-page-hero .page-hero-image img {
+    border-radius: 2rem 0.5rem 2rem 0.5rem;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.12);
+    width: 100%;
+    object-fit: cover;
+    max-height: 520px;
+}
+
+/* H2 das seções internas — espaçamento editorial */
+.content-section h2,
+.section-title.editorial {
+    letter-spacing: 0.01em;
+    margin-bottom: 1.5rem;
+}
+
+/* CTA section premium */
+.cta-premium {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #c97b5a 100%);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+    color: white;
+}
+
+.cta-premium h2 { color: white; margin-bottom: var(--spacing-sm); }
+.cta-premium p { color: rgba(255,255,255,0.85); margin-bottom: var(--spacing-xl); max-width: 540px; margin-left: auto; margin-right: auto; }
+.cta-premium .btn-outline { border-color: white; color: white; }
+.cta-premium .btn-outline:hover { background: white; color: var(--color-primary); }
+
+/* ========================================
+   PÁGINAS INTERNAS — BREADCRUMB & PAGE HERO
+   ======================================== */
+.breadcrumb-nav {
+    background: #f8f4f0;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 0.4rem;
+    padding: 0;
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '›';
+    margin-left: 0.4rem;
+    color: var(--color-text-secondary);
+}
+
+.breadcrumb a { color: var(--color-primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb [aria-current="page"] { color: var(--color-text-secondary); }
+
+.service-page-hero {
+    padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+    background: linear-gradient(135deg, #fdf6f0 0%, #f8f4f0 100%);
+}
+
+.service-page-hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+.page-hero-content { max-width: 560px; }
+.page-hero-image img { width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); object-fit: cover; }
+
+.content-section { max-width: 800px; margin: 0 auto; }
+.content-section h2 { font-family: var(--font-heading); font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: var(--spacing-md); color: var(--color-text-primary); }
+.content-section p { margin-bottom: var(--spacing-md); color: var(--color-text-secondary); line-height: 1.8; }
+
+@media (max-width: 768px) {
+    .service-page-hero .container {
+        grid-template-columns: 1fr;
+    }
+    .page-hero-image { order: -1; }
+    .page-hero-image img { max-height: 320px; }
+}
+
+/* ========================================
+   FAQ SECTION
+   ======================================== */
+.faq { background: var(--color-background); }
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.faq-item {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: box-shadow var(--transition-base);
+}
+
+.faq-item[open] { box-shadow: var(--shadow-md); }
+
+.faq-question {
+    cursor: pointer;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.faq-question::-webkit-details-marker { display: none; }
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    transition: transform var(--transition-base);
+}
+
+.faq-item[open] .faq-question::after { transform: rotate(45deg); }
+
+.faq-answer {
+    padding: 0 var(--spacing-lg) var(--spacing-md);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.faq-answer a { color: var(--color-primary); text-decoration: underline; }

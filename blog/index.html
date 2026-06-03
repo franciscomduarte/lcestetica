@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Saúde e Estética | LC Estética — Brasília e Águas Claras DF</title>
+    <meta name="description" content="Blog de saúde integrativa e estética em Brasília. Artigos sobre Botox, Ozonioterapia, Fios de PDO, Melasma, Skinbooster e muito mais. Pela Dra. Lara Cristian.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lcsaudeintegrativa.com.br/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog de Saúde e Estética | LC Estética — Brasília e Águas Claras">
+    <meta property="og:description" content="Conteúdo educativo sobre estética e saúde integrativa em Brasília pela Dra. Lara Cristian.">
+    <meta property="og:url" content="https://www.lcsaudeintegrativa.com.br/blog/">
+    <meta property="og:image" content="https://www.lcsaudeintegrativa.com.br/assets/og-image.jpg">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.lcsaudeintegrativa.com.br/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.lcsaudeintegrativa.com.br/blog/"}]}
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog LC Estética e Saúde Integrativa",
+      "description": "Artigos educativos sobre estética, saúde integrativa e bem-estar pela Dra. Lara Cristian em Brasília.",
+      "url": "https://www.lcsaudeintegrativa.com.br/blog/",
+      "publisher": {
+        "@type": "MedicalBusiness",
+        "name": "LC Estética e Saúde Integrativa",
+        "url": "https://www.lcsaudeintegrativa.com.br/"
+      }
+    }
+    </script>
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #fdf6f0 0%, #f8f4f0 100%);
+            padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+            text-align: center;
+        }
+        .blog-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: var(--spacing-md); }
+        .blog-hero p { max-width: 600px; margin: 0 auto; color: var(--color-text-secondary); font-size: 1.1rem; }
+
+        .blog-filters { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin: var(--spacing-xl) 0; }
+        .blog-filter { padding: 0.5rem 1.25rem; border-radius: 2rem; border: 1.5px solid rgba(0,0,0,0.12); background: white; font-size: 0.875rem; cursor: pointer; color: var(--color-text-secondary); transition: all var(--transition-base); }
+        .blog-filter:hover, .blog-filter.active { border-color: var(--color-primary); color: var(--color-primary); background: #fdf6f0; }
+
+        .blog-grid { padding: var(--spacing-2xl) 0 var(--spacing-3xl); }
+        .blog-layout { display: grid; grid-template-columns: 1fr; gap: var(--spacing-2xl); }
+
+        .blog-hero-card {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 0;
+            background: white;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: box-shadow var(--transition-base);
+        }
+        .blog-hero-card:hover { box-shadow: var(--shadow-lg); }
+        .blog-hero-card .card-image { height: 100%; min-height: 320px; }
+        .blog-hero-card .card-image img { width: 100%; height: 100%; object-fit: cover; }
+        .blog-hero-card .card-content { padding: var(--spacing-2xl); display: flex; flex-direction: column; justify-content: center; }
+        .blog-hero-card .card-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-primary); font-weight: 600; margin-bottom: var(--spacing-sm); }
+        .blog-hero-card .card-title { font-family: var(--font-heading); font-size: clamp(1.3rem, 2.5vw, 1.8rem); margin-bottom: var(--spacing-sm); line-height: 1.3; }
+        .blog-hero-card .card-excerpt { color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: var(--spacing-lg); }
+        .blog-hero-card .card-meta { font-size: 0.8rem; color: var(--color-text-secondary); display: flex; gap: 1rem; align-items: center; margin-bottom: var(--spacing-md); }
+
+        .blog-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-lg); }
+        .blog-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow var(--transition-base), transform var(--transition-base);
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+        .blog-card .card-image { height: 200px; overflow: hidden; }
+        .blog-card .card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
+        .blog-card:hover .card-image img { transform: scale(1.04); }
+        .blog-card .card-content { padding: var(--spacing-lg); flex: 1; display: flex; flex-direction: column; }
+        .blog-card .card-tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-primary); font-weight: 600; margin-bottom: var(--spacing-xs); }
+        .blog-card .card-title { font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: var(--spacing-sm); line-height: 1.4; flex: 1; }
+        .blog-card .card-meta { font-size: 0.75rem; color: var(--color-text-secondary); margin-top: auto; padding-top: var(--spacing-sm); border-top: 1px solid rgba(0,0,0,0.06); }
+        .blog-card a.card-title-link { text-decoration: none; color: inherit; }
+        .blog-card a.card-title-link:hover { color: var(--color-primary); }
+
+        .coming-soon-badge { display: inline-block; background: #fdf6f0; color: var(--color-primary); font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 1rem; margin-left: 0.5rem; vertical-align: middle; }
+
+        .editorial-plan { padding: var(--spacing-3xl) 0; background: var(--color-background); }
+        .plan-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--spacing-md); margin-top: var(--spacing-xl); }
+        .plan-item { background: white; border-radius: var(--radius-lg); padding: 1rem 1.25rem; border-left: 3px solid var(--color-primary); }
+        .plan-item .plan-num { font-size: 0.75rem; color: var(--color-text-secondary); margin-bottom: 0.25rem; }
+        .plan-item .plan-title { font-size: 0.9rem; font-weight: 600; color: var(--color-text-primary); }
+        .plan-item .plan-kw { font-size: 0.75rem; color: var(--color-primary); margin-top: 0.25rem; }
+
+        @media (max-width: 1024px) { .blog-cards-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) {
+            .blog-hero-card { grid-template-columns: 1fr; }
+            .blog-hero-card .card-image { min-height: 220px; }
+            .blog-cards-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://wa.me/5561998092709?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contato via WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M27.281 4.65C24.281 1.65 20.281 0 16.031 0C7.281 0 0.156 7.125 0.156 15.875C0.156 18.625 0.906 21.281 2.281 23.625L0.031 32L8.656 29.781C10.906 31.031 13.437 31.687 16.031 31.687C24.781 31.687 31.906 24.562 31.906 15.812C31.906 11.562 30.281 7.65 27.281 4.65ZM16.031 29.031C13.687 29.031 11.406 28.406 9.406 27.25L8.906 26.969L3.906 28.219L5.187 23.344L4.875 22.812C3.625 20.719 2.969 18.344 2.969 15.875C2.969 8.687 8.812 2.844 16.031 2.844C19.531 2.844 22.844 4.156 25.312 6.625C27.781 9.094 29.125 12.406 29.125 15.875C29.125 23.062 23.25 29.031 16.031 29.031ZM23.219 19.156C22.812 18.969 20.875 18.031 20.5 17.875C20.125 17.75 19.844 17.688 19.562 18.094C19.281 18.5 18.562 19.375 18.312 19.656C18.094 19.937 17.844 19.969 17.437 19.781C15.5 18.812 14.219 18.062 12.906 15.781C12.562 15.187 13.25 15.219 13.875 14C14 13.719 13.937 13.5 13.844 13.312C13.75 13.125 12.937 11.187 12.594 10.406C12.25 9.656 11.906 9.75 11.656 9.75C11.406 9.75 11.125 9.75 10.844 9.75C10.562 9.75 10.125 9.844 9.75 10.25C9.375 10.656 8.375 11.594 8.375 13.531C8.375 15.469 9.781 17.344 9.969 17.625C10.156 17.906 12.937 22.156 17.156 23.875C19.844 25.062 20.812 25.156 22.062 24.969C22.844 24.844 24.406 24 24.75 23.062C25.094 22.125 25.094 21.344 25 21.187C24.906 21 24.625 20.906 24.219 20.719L23.219 19.156Z" fill="white"/></svg>
+    </a>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo brand-logo"><a href="/" class="logo-link"><span class="script-name">Lara Cristian</span><span class="sub-name">Estética e Saúde Integrativa</span></a></div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu de navegação"><span></span><span></span><span></span></button>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="mobile-logo"><div class="brand-logo"><span class="script-name">Lara Cristian</span><span class="sub-name">Estética e Saúde Integrativa</span></div></li>
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="/sobre.html" class="nav-link">Sobre</a></li>
+                    <li><a href="/blog/" class="nav-link active">Blog</a></li>
+                    <li><a href="/contato.html" class="nav-link">Contato</a></li>
+                </ul>
+                <a href="/contato.html" class="btn btn-primary cta-header">Agendar Avaliação</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <nav class="breadcrumb-nav" aria-label="Navegação estrutural">
+            <div class="container">
+                <ol class="breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Blog</li></ol>
+            </div>
+        </nav>
+
+        <section class="blog-hero">
+            <div class="container">
+                <span class="section-tag">Blog</span>
+                <h1>Saúde, Estética<br><em style="color: var(--color-primary); font-style: italic;">e Bem-Estar</em></h1>
+                <p>Conteúdo educativo sobre tratamentos estéticos, saúde integrativa e cuidado com o corpo pela Dra. Lara Cristian em Brasília.</p>
+                <div class="blog-filters">
+                    <button class="blog-filter active">Todos</button>
+                    <button class="blog-filter">Botox</button>
+                    <button class="blog-filter">Ozonioterapia</button>
+                    <button class="blog-filter">Estética Facial</button>
+                    <button class="blog-filter">Saúde Integrativa</button>
+                    <button class="blog-filter">Brasília</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-grid">
+            <div class="container">
+                <div class="blog-layout">
+
+                    <!-- Hero Card (artigo em destaque) -->
+                    <article class="blog-hero-card">
+                        <div class="card-image">
+                            <img src="../images/botox.webp" alt="Quanto tempo dura o Botox?" width="600" height="400" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">Botox</span>
+                            <div class="card-meta">
+                                <span>Dra. Lara Cristian</span>
+                                <span>•</span>
+                                <span>Leitura: 5 min</span>
+                            </div>
+                            <h2 class="card-title">Quanto tempo dura o Botox? Tudo que você precisa saber<span class="coming-soon-badge">Em breve</span></h2>
+                            <p class="card-excerpt">Entenda os fatores que influenciam a duração do Botox, quando refazer o procedimento e como maximizar os resultados do seu tratamento.</p>
+                            <a href="#" class="btn btn-secondary" aria-label="Leia: Quanto tempo dura o Botox">Leia o artigo →</a>
+                        </div>
+                    </article>
+
+                    <!-- Grade de artigos -->
+                    <div class="blog-cards-grid">
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/botox.webp" alt="Botox dói?" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Botox</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">Botox dói? Tire todas as suas dúvidas <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">5 min de leitura</div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/botox.webp" alt="Botox preventivo" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Botox</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">Botox preventivo: quando começar? <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">4 min de leitura</div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/ozonio.webp" alt="O que é ozonioterapia" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Ozonioterapia</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">O que é ozonioterapia e para que serve? <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">6 min de leitura</div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/ozonio.webp" alt="Ozonioterapia funciona?" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Ozonioterapia</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">Ozonioterapia realmente funciona? <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">5 min de leitura</div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/fios_pdo.webp" alt="Fios de PDO" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Estética Facial</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">Fios de PDO: o que é e como funciona <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">5 min de leitura</div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/bioestimulador__1_.jpeg" alt="Bioestimulador vs Botox" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Estética Facial</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">Bioestimulador de colágeno vs Botox: qual escolher? <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">6 min de leitura</div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/melasma1.jpg" alt="Tratamento melasma" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Estética Facial</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">Como tratar melasma definitivamente <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">7 min de leitura</div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/skin-booster.webp" alt="Skinbooster hidratação pele" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Estética Facial</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">Skinbooster: a hidratação que transforma a pele <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">4 min de leitura</div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/terapia-neural.jpg" alt="Terapia neural dores crônicas" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Saúde Integrativa</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">Terapia neural para dores crônicas: como funciona? <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">6 min de leitura</div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/gordura-corporal.webp" alt="Clínica estética Águas Claras" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Brasília</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">Clínica estética em Águas Claras: como escolher? <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">5 min de leitura</div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/ozonio.webp" alt="Ozonioterapia em Brasília" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Brasília</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">Ozonioterapia em Brasília: onde fazer e o que esperar <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">5 min de leitura</div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="../images/detox-nutricao.webp" alt="Longevidade e saúde integrativa" width="400" height="200" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-tag">Saúde Integrativa</span>
+                                <h3 class="card-title"><a href="#" class="card-title-link">Longevidade e saúde integrativa: como começar <span class="coming-soon-badge">Em breve</span></a></h3>
+                                <div class="card-meta">8 min de leitura</div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plano Editorial Completo (50 temas) -->
+        <section class="editorial-plan">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Plano Editorial</span>
+                    <h2 class="section-title">Próximos Artigos — 50 Temas</h2>
+                    <p class="section-description">Conteúdo educativo planejado para os próximos 6 meses. Assine nossas redes para ser notificado.</p>
+                </div>
+                <div class="plan-grid">
+                    <!-- Botox (10 artigos) -->
+                    <div class="plan-item"><div class="plan-num">01 · Botox</div><div class="plan-title">Quanto tempo dura o Botox?</div><div class="plan-kw">quanto dura botox</div></div>
+                    <div class="plan-item"><div class="plan-num">02 · Botox</div><div class="plan-title">Botox dói? Tire todas as dúvidas</div><div class="plan-kw">botox dói</div></div>
+                    <div class="plan-item"><div class="plan-num">03 · Botox</div><div class="plan-title">Botox preventivo: quando começar?</div><div class="plan-kw">botox preventivo</div></div>
+                    <div class="plan-item"><div class="plan-num">04 · Botox</div><div class="plan-title">Botox no pescoço: o que é o Nefertiti Lift?</div><div class="plan-kw">botox pescoço nefertiti</div></div>
+                    <div class="plan-item"><div class="plan-num">05 · Botox</div><div class="plan-title">Quanto custa o Botox em Brasília?</div><div class="plan-kw">quanto custa botox brasília</div></div>
+                    <div class="plan-item"><div class="plan-num">06 · Botox</div><div class="plan-title">Botox para bruxismo: como funciona?</div><div class="plan-kw">botox bruxismo</div></div>
+                    <div class="plan-item"><div class="plan-num">07 · Botox</div><div class="plan-title">Botox para suor excessivo (hiperidrose)</div><div class="plan-kw">botox hiperidrose</div></div>
+                    <div class="plan-item"><div class="plan-num">08 · Botox</div><div class="plan-title">Botox nas axilas: tudo que você precisa saber</div><div class="plan-kw">botox axilas suor</div></div>
+                    <div class="plan-item"><div class="plan-num">09 · Botox</div><div class="plan-title">Cuidados após o Botox: guia completo</div><div class="plan-kw">cuidados pós botox</div></div>
+                    <div class="plan-item"><div class="plan-num">10 · Botox</div><div class="plan-title">Botox X Preenchimento: qual a diferença?</div><div class="plan-kw">diferença botox preenchimento</div></div>
+                    <!-- Ozonioterapia (8 artigos) -->
+                    <div class="plan-item"><div class="plan-num">11 · Ozônio</div><div class="plan-title">O que é ozonioterapia e para que serve?</div><div class="plan-kw">o que é ozonioterapia</div></div>
+                    <div class="plan-item"><div class="plan-num">12 · Ozônio</div><div class="plan-title">Ozonioterapia realmente funciona?</div><div class="plan-kw">ozonioterapia funciona</div></div>
+                    <div class="plan-item"><div class="plan-num">13 · Ozônio</div><div class="plan-title">Benefícios da ozonioterapia para a saúde</div><div class="plan-kw">benefícios ozonioterapia</div></div>
+                    <div class="plan-item"><div class="plan-num">14 · Ozônio</div><div class="plan-title">Ozonioterapia para alopécia: como funciona?</div><div class="plan-kw">ozonioterapia alopécia queda cabelo</div></div>
+                    <div class="plan-item"><div class="plan-num">15 · Ozônio</div><div class="plan-title">Ozonioterapia intravenosa: o que é?</div><div class="plan-kw">ozonioterapia intravenosa autohemoterapia</div></div>
+                    <div class="plan-item"><div class="plan-num">16 · Ozônio</div><div class="plan-title">Ozonioterapia para dores articulares</div><div class="plan-kw">ozonioterapia articulações dores</div></div>
+                    <div class="plan-item"><div class="plan-num">17 · Ozônio</div><div class="plan-title">Contraindicações da ozonioterapia</div><div class="plan-kw">contraindicações ozonioterapia</div></div>
+                    <div class="plan-item"><div class="plan-num">18 · Ozônio</div><div class="plan-title">Ozonioterapia em Brasília: onde fazer?</div><div class="plan-kw">ozonioterapia brasília</div></div>
+                    <!-- Estética Facial (10 artigos) -->
+                    <div class="plan-item"><div class="plan-num">19 · Facial</div><div class="plan-title">Fios de PDO: o que é e como funciona?</div><div class="plan-kw">fios de pdo</div></div>
+                    <div class="plan-item"><div class="plan-num">20 · Facial</div><div class="plan-title">Bioestimulador de colágeno vs Botox</div><div class="plan-kw">bioestimulador colágeno comparação</div></div>
+                    <div class="plan-item"><div class="plan-num">21 · Facial</div><div class="plan-title">Como tratar melasma definitivamente</div><div class="plan-kw">tratamento melasma</div></div>
+                    <div class="plan-item"><div class="plan-num">22 · Facial</div><div class="plan-title">Skinbooster: a hidratação que transforma a pele</div><div class="plan-kw">skinbooster ácido hialurônico</div></div>
+                    <div class="plan-item"><div class="plan-num">23 · Facial</div><div class="plan-title">Harmonização facial: o que é e como funciona?</div><div class="plan-kw">harmonização facial</div></div>
+                    <div class="plan-item"><div class="plan-num">24 · Facial</div><div class="plan-title">Microagulhamento: benefícios e indicações</div><div class="plan-kw">microagulhamento benefícios</div></div>
+                    <div class="plan-item"><div class="plan-num">25 · Facial</div><div class="plan-title">Ácido hialurônico nos lábios: tudo sobre preenchimento labial</div><div class="plan-kw">preenchimento labial lábios</div></div>
+                    <div class="plan-item"><div class="plan-num">26 · Facial</div><div class="plan-title">Rugas ao redor dos olhos: como tratar?</div><div class="plan-kw">rugas pés de galinha olhos</div></div>
+                    <div class="plan-item"><div class="plan-num">27 · Facial</div><div class="plan-title">Bigode chinês: tratamentos disponíveis</div><div class="plan-kw">bigode chinês tratamento</div></div>
+                    <div class="plan-item"><div class="plan-num">28 · Facial</div><div class="plan-title">Como escolher o melhor tratamento facial para você</div><div class="plan-kw">melhor tratamento facial</div></div>
+                    <!-- Corporal (6 artigos) -->
+                    <div class="plan-item"><div class="plan-num">29 · Corporal</div><div class="plan-title">Gordura localizada: tratamentos sem cirurgia</div><div class="plan-kw">gordura localizada tratamento</div></div>
+                    <div class="plan-item"><div class="plan-num">30 · Corporal</div><div class="plan-title">Celulite grau 3 e 4: como tratar?</div><div class="plan-kw">celulite grau 3 tratamento</div></div>
+                    <div class="plan-item"><div class="plan-num">31 · Corporal</div><div class="plan-title">Papada sem cirurgia: opções disponíveis</div><div class="plan-kw">papada tratamento sem cirurgia</div></div>
+                    <div class="plan-item"><div class="plan-num">32 · Corporal</div><div class="plan-title">Flacidez corporal: causas e tratamentos</div><div class="plan-kw">flacidez corporal tratamento</div></div>
+                    <div class="plan-item"><div class="plan-num">33 · Corporal</div><div class="plan-title">Estrias: como minimizar e tratar</div><div class="plan-kw">tratamento estrias</div></div>
+                    <div class="plan-item"><div class="plan-num">34 · Corporal</div><div class="plan-title">Tratamentos corporais em Águas Claras</div><div class="plan-kw">tratamentos corporais águas claras</div></div>
+                    <!-- Saúde Integrativa (8 artigos) -->
+                    <div class="plan-item"><div class="plan-num">35 · Integrativa</div><div class="plan-title">O que é saúde integrativa?</div><div class="plan-kw">saúde integrativa o que é</div></div>
+                    <div class="plan-item"><div class="plan-num">36 · Integrativa</div><div class="plan-title">Terapia neural para dores crônicas</div><div class="plan-kw">terapia neural dores crônicas</div></div>
+                    <div class="plan-item"><div class="plan-num">37 · Integrativa</div><div class="plan-title">Ventosaterapia: benefícios e indicações</div><div class="plan-kw">ventosaterapia benefícios</div></div>
+                    <div class="plan-item"><div class="plan-num">38 · Integrativa</div><div class="plan-title">Detox e nutrição: protocolo de 30 dias</div><div class="plan-kw">detox nutrição protocolo</div></div>
+                    <div class="plan-item"><div class="plan-num">39 · Integrativa</div><div class="plan-title">Tratamento capilar para alopécia</div><div class="plan-kw">alopécia tratamento brasília</div></div>
+                    <div class="plan-item"><div class="plan-num">40 · Integrativa</div><div class="plan-title">Longevidade saudável: como começar</div><div class="plan-kw">longevidade saúde integrativa</div></div>
+                    <div class="plan-item"><div class="plan-num">41 · Integrativa</div><div class="plan-title">Medicina integrativa vs convencional</div><div class="plan-kw">medicina integrativa diferença</div></div>
+                    <div class="plan-item"><div class="plan-num">42 · Integrativa</div><div class="plan-title">Imunidade e ozonioterapia</div><div class="plan-kw">ozonioterapia imunidade</div></div>
+                    <!-- Local SEO (8 artigos) -->
+                    <div class="plan-item"><div class="plan-num">43 · Local</div><div class="plan-title">Clínica estética em Águas Claras: como escolher?</div><div class="plan-kw">clínica estética águas claras</div></div>
+                    <div class="plan-item"><div class="plan-num">44 · Local</div><div class="plan-title">Botox em Águas Claras: onde fazer com segurança</div><div class="plan-kw">botox águas claras</div></div>
+                    <div class="plan-item"><div class="plan-num">45 · Local</div><div class="plan-title">Ozonioterapia em Brasília: onde fazer?</div><div class="plan-kw">ozonioterapia brasília onde fazer</div></div>
+                    <div class="plan-item"><div class="plan-num">46 · Local</div><div class="plan-title">Fios de PDO em Brasília e Águas Claras</div><div class="plan-kw">fios pdo brasília águas claras</div></div>
+                    <div class="plan-item"><div class="plan-num">47 · Local</div><div class="plan-title">Tratamento de melasma em Brasília</div><div class="plan-kw">melasma brasília df tratamento</div></div>
+                    <div class="plan-item"><div class="plan-num">48 · Local</div><div class="plan-title">Bioestimulador em Brasília: guia completo</div><div class="plan-kw">bioestimulador brasília</div></div>
+                    <div class="plan-item"><div class="plan-num">49 · Local</div><div class="plan-title">Saúde integrativa em Brasília: onde encontrar</div><div class="plan-kw">saúde integrativa brasília</div></div>
+                    <div class="plan-item"><div class="plan-num">50 · Local</div><div class="plan-title">Vista Shopping Águas Claras: guia de saúde e estética</div><div class="plan-kw">vista shopping águas claras estética</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Newsletter / WhatsApp -->
+        <section class="cta-premium">
+            <div class="container">
+                <h2>Quer acompanhar nossos conteúdos?</h2>
+                <p>Siga-nos no Instagram para receber dicas de saúde e estética e novidades da clínica em Águas Claras.</p>
+                <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                    <a href="https://www.instagram.com/lcsaudeintegrativa" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">Seguir no Instagram</a>
+                    <a href="/contato.html" class="btn btn-outline btn-large">Agendar Avaliação</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col footer-about"><div class="footer-logo brand-logo"><span class="script-name">Lara Cristian</span><span class="sub-name">Estética e Saúde Integrativa</span></div><p class="footer-description">Blog de saúde integrativa e estética em Brasília e Águas Claras - DF.</p></div>
+                <div class="footer-col"><h4 class="footer-title">Tratamentos</h4><ul class="footer-links"><li><a href="/servicos/botox-aguas-claras.html">Botox em Águas Claras</a></li><li><a href="/servicos/ozonioterapia-brasilia.html">Ozonioterapia</a></li><li><a href="/servicos/fios-pdo-aguas-claras.html">Fios de PDO</a></li><li><a href="/servicos/bioestimulador-colageno-brasilia.html">Bioestimulador</a></li><li><a href="/servicos/tratamento-melasma-brasilia.html">Melasma</a></li></ul></div>
+                <div class="footer-col"><h4 class="footer-title">Contato</h4><ul class="footer-contact"><li><span>Vista Shopping, Águas Claras - DF</span></li><li><a href="tel:+5561998092709">(61) 99809-2709</a></li><li><span>Seg – Sex: 08:00 – 18:00</span></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 LC Estética e Saúde Integrativa. Todos os direitos reservados.</p></div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
