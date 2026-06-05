@@ -139,7 +139,7 @@
 
         <section class="blog-hero">
             <div class="container">
-                <span class="section-tag">Blog</span>
+                <span class="section-tag">Artigos</span>
                 <h1>Saúde, Estética<br><em style="color: var(--color-primary); font-style: italic;">e Bem-Estar</em></h1>
                 <p>Conteúdo educativo sobre tratamentos estéticos, saúde integrativa e cuidado com o corpo pela Dra. Lara Cristian em Brasília.</p>
                 <div class="blog-filters">
@@ -798,5 +798,32 @@
         </div>
     </footer>
     <script src="../script.js"></script>
+    <script>
+        (function () {
+            var filters = document.querySelectorAll('.blog-filter');
+            var articles = document.querySelectorAll('article');
+
+            // Auto-assign data-category from each article's .card-tag text
+            articles.forEach(function (article) {
+                var tag = article.querySelector('.card-tag');
+                if (tag) article.dataset.category = tag.textContent.trim();
+            });
+
+            filters.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    filters.forEach(function (f) { f.classList.remove('active'); });
+                    btn.classList.add('active');
+
+                    var selected = btn.textContent.trim();
+
+                    articles.forEach(function (article) {
+                        if (!article.dataset.category) return;
+                        var match = selected === 'Todos' || article.dataset.category === selected;
+                        article.style.display = match ? '' : 'none';
+                    });
+                });
+            });
+        })();
+    </script>
 </body>
 </html>
