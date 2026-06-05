@@ -2109,6 +2109,12 @@ a .brand-logo span.sub-name {
 .mt-3 { margin-top: var(--spacing-md); }
 .mt-4 { margin-top: var(--spacing-lg); }
 
+.footer-cnpj {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    margin-top: 0.25rem;
+}
+
 /* ========================================
    DESIGN EDITORIAL — ÂNCORA DIFERENCIADORA
    Regra dourada + tipografia premium para páginas internas

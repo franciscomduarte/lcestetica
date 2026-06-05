@@ -1,4 +1,4 @@
-# 🌟 LC Estética e Saúde Integrativa - Site Oficial
+﻿# 🌟 LC Estética e Saúde Integrativa - Site Oficial
 
 Site profissional desenvolvido para a clínica LC Estética e Saúde Integrativa, especializada em tratamentos estéticos e saúde integrativa em Águas Claras - DF.
 
@@ -124,7 +124,7 @@ fbq('track', 'PageView');
 
 **O que fazer:**
 1. Acesse o [Google Maps](https://www.google.com/maps)
-2. Pesquise por "Vista Shopping Águas Claras"
+2. Pesquise por "Connect Towers Águas Claras"
 3. Clique em "Compartilhar" → "Incorporar um mapa"
 4. Copie o código iframe
 5. Substitua o `src` do iframe no HTML
@@ -251,7 +251,7 @@ Processo similar ao Netlify:
    - Essencial para SEO local
    - Crie/reivindique: [business.google.com](https://business.google.com)
    - Adicione:
-     - Endereço completo (Vista Shopping)
+     - Endereço completo (Connect Towers)
      - Horários de atendimento
      - Fotos de alta qualidade
      - Categorias: "Clínica de Estética", "Centro de Saúde"
@@ -525,9 +525,7 @@ Você agora tem um site profissional, otimizado e pronto para converter visitant
 4. Comece a divulgar nas redes sociais
 5. Considere investir em Google Ads e Meta Ads
 
-**Sucesso com seu novo site! 🚀**
+**Sucesso com seu novo site!**
 
 ---
-
-**Desenvolvido com ❤️ por Claude AI**
 *Versão 1.0 - Fevereiro 2025*

@@ -661,7 +661,6 @@ window.addEventListener('scroll', throttle(function() {
 // 14. CONSOLE LOG (REMOVER EM PRODUÇÃO)
 // ========================================
 console.log('%c🌟 LC Estética e Saúde Integrativa', 'color: #8B6F47; font-size: 20px; font-weight: bold;');
-console.log('%cSite desenvolvido com Claude AI', 'color: #666; font-size: 12px;');
 console.log('%cPara suporte: https://www.anthropic.com', 'color: #999; font-size: 10px;');
 
 // ========================================

@@ -79,5 +79,175 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/servicos/tratamento-capilar-brasilia.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Galeria -->
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/galeria.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artigos do Blog — Mês 1: Botox e Ozonioterapia -->
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/quanto-tempo-dura-botox.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/botox-doi.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/botox-preventivo.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/o-que-e-ozonioterapia.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/ozonioterapia-funciona.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigos do Blog — Mês 2: Fios PDO, Bioestimulador, Melasma -->
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/fios-pdo-o-que-e.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/bioestimulador-vs-botox.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/como-tratar-melasma.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigos do Blog — Mês 3: Saúde Integrativa e Local SEO -->
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/terapia-neural-dores-cronicas.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/clinica-estetica-aguas-claras.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/ozonioterapia-brasilia-onde-fazer.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigos adicionais — Mês 1 -->
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/beneficios-ozonioterapia.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/botox-vs-preenchimento.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/cuidados-pos-botox.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigos adicionais — Mês 2 -->
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/skinbooster-beneficios.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/tipos-fios-pdo.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/bioestimulador-duracao.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/melasma-tem-cura.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/microagulhamento-beneficios.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigos adicionais — Mês 3 -->
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/ventosaterapia-beneficios.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/o-que-e-saude-integrativa.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/ozonioterapia-alopecia.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/botox-aguas-claras.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lcsaudeintegrativa.com.br/blog/melasma-brasilia.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
