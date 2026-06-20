@@ -37,6 +37,12 @@
     <meta name="twitter:title" content="LC Estética e Saúde Integrativa">
     <meta name="twitter:description" content="Realce sua beleza natural com saúde. Tratamentos estéticos e integrativo em Águas Claras - DF.">
     <meta name="twitter:image" content="https://www.lcsaudeintegrativa.com.br/assets/og-image.jpg">
+
+    <!-- Geo / Local SEO -->
+    <meta name="geo.region" content="BR-DF">
+    <meta name="geo.placename" content="Águas Claras, Brasília, Distrito Federal">
+    <meta name="geo.position" content="-15.8367;-48.0261">
+    <meta name="ICBM" content="-15.8367, -48.0261">
     
     <!-- ========================================
          FAVICON (Adicione seus próprios ícones)
@@ -124,6 +130,15 @@
       "sameAs": [
         "https://www.instagram.com/lcsaudeintegrativa",
         "https://www.facebook.com/lcsaudeintegrativa"
+      ],
+      "hasMap": "https://www.google.com/maps/search/Connect+Towers+QS+1+Bloco+D+%C3%81guas+Claras+Bras%C3%ADlia+DF",
+      "areaServed": [
+        {"@type": "City", "name": "Águas Claras"},
+        {"@type": "City", "name": "Brasília"},
+        {"@type": "AdministrativeArea", "name": "Guará"},
+        {"@type": "AdministrativeArea", "name": "Taguatinga"},
+        {"@type": "AdministrativeArea", "name": "Ceilândia"},
+        {"@type": "State", "name": "Distrito Federal"}
       ],
       "medicalSpecialty": [
         "Dermatology",
@@ -894,6 +909,51 @@
     </section>
 
     <!-- ========================================
+         SEÇÃO: NOSSA CLÍNICA
+         ======================================== -->
+    <section class="section clinica-fotos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nossa Clínica</span>
+                <h2 class="section-title">Um Espaço Pensado Para Você</h2>
+                <p class="section-description">
+                    Ambiente acolhedor e moderno no Edifício Connect Towers, Águas Claras.
+                    Tecnologia de ponta e atendimento humanizado da Dra. Lara Cristian.
+                </p>
+            </div>
+            <div class="clinica-gallery">
+                <!-- FOTO REAL: substituir por foto do espaço da recepção/sala de espera -->
+                <div class="clinica-foto-slot">
+                    <img src="images/dra-lara-cristian.jpeg" alt="Dra. Lara Cristian — LC Estética e Saúde Integrativa, Águas Claras" loading="lazy">
+                    <div class="clinica-foto-label">Dra. Lara Cristian</div>
+                </div>
+                <!-- FOTO REAL: substituir por foto do consultório ou sala de atendimento -->
+                <div class="clinica-foto-slot clinica-foto-placeholder">
+                    <div class="placeholder-content">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                        <span>Espaço de Atendimento<br><small>Foto em breve</small></span>
+                    </div>
+                </div>
+                <!-- FOTO REAL: substituir por foto dos equipamentos ou ambiente -->
+                <div class="clinica-foto-slot clinica-foto-placeholder">
+                    <div class="placeholder-content">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                        <span>Nossa Estrutura<br><small>Foto em breve</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
          SEÇÃO: DEPOIMENTOS (CARROSSEL)
          ======================================== -->
     <section class="section testimonials" id="depoimentos">
@@ -1182,24 +1242,23 @@
                         </div>
                     </div>
 
-                    <a href="https://www.google.com/maps/search/Vista+Shopping+Águas+Claras" 
-                       class="btn btn-primary btn-large" 
-                       target="_blank" 
+                    <a href="https://www.google.com/maps/search/Connect+Towers+QS+1+Bloco+D+%C3%81guas+Claras+Bras%C3%ADlia+DF"
+                       class="btn btn-primary btn-large"
+                       target="_blank"
                        rel="noopener noreferrer">
                         Ver no Google Maps
                     </a>
                 </div>
 
                 <div class="location-map">
-                    <!-- Google Maps Embed -->
-                    <!-- INSTRUÇÕES: Substitua o src abaixo pelo embed correto do Google Maps -->
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.1547895895!2d-48.028364!3d-15.836687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a30e1e0000001%3A0x1!2sVista%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1234567890"
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
+                    <!-- Google Maps Embed — Connect Towers, Águas Claras -->
+                    <iframe
+                        src="https://maps.google.com/maps?q=Connect+Towers+QS+1+Bloco+D+%C3%81guas+Claras+Bras%C3%ADlia+DF+72030-015&output=embed&hl=pt-BR&z=16"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
                         title="Localização da LC Estética e Saúde Integrativa no mapa">
                     </iframe>
@@ -1258,6 +1317,21 @@
                 </div>
 
                 <div class="contact-form-wrapper">
+                    <div class="quick-book">
+                        <h3>Quer agendar agora?</h3>
+                        <p>Fale direto pelo WhatsApp — respondemos em minutos no horário de atendimento.</p>
+                        <a href="https://wa.me/5561998092709?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20LC%20Est%C3%A9tica."
+                           class="btn btn-whatsapp btn-large"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <path d="M27.281 4.65C24.281 1.65 20.281 0 16.031 0C7.281 0 0.156 7.125 0.156 15.875C0.156 18.625 0.906 21.281 2.281 23.625L0.031 32L8.656 29.781C10.906 31.031 13.437 31.687 16.031 31.687C24.781 31.687 31.906 24.562 31.906 15.812C31.906 11.562 30.281 7.65 27.281 4.65Z" fill="currentColor"/>
+                            </svg>
+                            Agendar pelo WhatsApp
+                        </a>
+                        <p class="quick-book-note">Seg–Sex, 08h–18h · Resposta rápida</p>
+                    </div>
+                    <div class="divider-or"><span>ou preencha o formulário</span></div>
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
                             <label for="name">Nome Completo *</label>
