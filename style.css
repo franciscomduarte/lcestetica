@@ -2296,6 +2296,37 @@ a .brand-logo span.sub-name {
 .faq-answer a { color: var(--color-primary); text-decoration: underline; }
 
 /* ============================================================
+   BLOCO: INFO DE CONTATO (coluna esquerda)
+   ============================================================ */
+.contact-info-block {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--color-text-secondary);
+    font-size: var(--font-base);
+}
+
+.contact-info-item svg {
+    flex-shrink: 0;
+    color: var(--color-primary);
+}
+
+.contact-info-item a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.contact-info-item a:hover { color: var(--color-primary); }
+
+/* ============================================================
    SEÇÃO: NOSSA CLÍNICA
    ============================================================ */
 .clinica-fotos { background: var(--color-gray-100); }
