@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Nossa Estrutura | LC Estética e Saúde Integrativa — Águas Claras, Brasília</title>
+    <meta name="description" content="Conheça o espaço da LC Estética e Saúde Integrativa em Águas Claras. Ambiente acolhedor, equipamentos de ponta e consultório da Dra. Lara Cristian no Edifício Connect Towers, Brasília - DF.">
+    <meta name="author" content="LC Estética e Saúde Integrativa">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lcsaudeintegrativa.com.br/estrutura.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LC Estética e Saúde Integrativa">
+    <meta property="og:title" content="Nossa Estrutura | LC Estética e Saúde Integrativa">
+    <meta property="og:description" content="Conheça nosso espaço em Águas Claras — recepção, consultório, salas de atendimento e ozonioterapia. Ambiente pensado para seu conforto.">
+    <meta property="og:url" content="https://www.lcsaudeintegrativa.com.br/estrutura.html">
+    <meta property="og:image" content="https://www.lcsaudeintegrativa.com.br/images/clinica/clinica-10.jpg">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Geo / Local SEO -->
+    <meta name="geo.region" content="BR-DF">
+    <meta name="geo.placename" content="Águas Claras, Brasília, Distrito Federal">
+    <meta name="geo.position" content="-15.8367;-48.0261">
+    <meta name="ICBM" content="-15.8367, -48.0261">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.lcsaudeintegrativa.com.br/"},{"@type":"ListItem","position":2,"name":"Nossa Estrutura","item":"https://www.lcsaudeintegrativa.com.br/estrutura.html"}]}
+    </script>
+
+    <style>
+        /* ── Hero da página Estrutura ── */
+        .estrutura-hero {
+            background: linear-gradient(135deg, var(--color-gray-900) 0%, var(--color-gray-800) 100%);
+            padding: calc(80px + var(--spacing-3xl)) 0 var(--spacing-3xl);
+            text-align: center;
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+        .estrutura-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('images/clinica/clinica-10.jpg') center/cover no-repeat;
+            opacity: 0.18;
+        }
+        .estrutura-hero .container { position: relative; z-index: 1; }
+        .estrutura-hero .section-tag { color: var(--color-accent); }
+        .estrutura-hero .page-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 600;
+            margin: var(--spacing-sm) 0 var(--spacing-md);
+        }
+        .estrutura-hero .page-subtitle {
+            font-size: var(--font-lg);
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ── Categorias ── */
+        .estrutura-category { padding: var(--spacing-3xl) 0 0; }
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+        .category-header h2 {
+            font-family: var(--font-display);
+            font-size: var(--font-2xl);
+            color: var(--color-text-primary);
+            white-space: nowrap;
+        }
+        .category-line {
+            flex: 1;
+            height: 1px;
+            background: var(--color-gray-300);
+        }
+
+        /* ── Grid de fotos ── */
+        .estrutura-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-3xl);
+        }
+        .estrutura-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .estrutura-card {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            background: var(--color-gray-200);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+        }
+        .estrutura-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .estrutura-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+        .estrutura-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background var(--transition-base);
+        }
+        .estrutura-card:hover .estrutura-card-overlay { background: rgba(0,0,0,0.35); }
+        .estrutura-card-overlay svg {
+            color: white;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+        .estrutura-card:hover .estrutura-card-overlay svg { opacity: 1; }
+        .estrutura-card-label {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: linear-gradient(transparent, rgba(0,0,0,0.6));
+            color: #fff;
+            font-size: var(--font-sm);
+            font-weight: 500;
+            transform: translateY(100%);
+            transition: transform var(--transition-base);
+        }
+        .estrutura-card:hover .estrutura-card-label { transform: translateY(0); }
+
+        /* ── Lightbox ── */
+        dialog.lightbox {
+            background: rgba(0,0,0,0.92);
+            border: none;
+            padding: 0;
+            max-width: 100vw;
+            max-height: 100vh;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        dialog.lightbox::backdrop { background: rgba(0,0,0,0.92); }
+        dialog.lightbox img {
+            max-width: 92vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+        }
+        .lightbox-close {
+            position: fixed;
+            top: var(--spacing-lg);
+            right: var(--spacing-lg);
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background var(--transition-base);
+        }
+        .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+        .lightbox-caption {
+            position: fixed;
+            bottom: var(--spacing-lg);
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.8);
+            font-size: var(--font-sm);
+            background: rgba(0,0,0,0.5);
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-md);
+        }
+
+        /* ── CTA final ── */
+        .estrutura-cta {
+            background: linear-gradient(135deg, var(--color-secondary), #1a3d1b);
+            padding: var(--spacing-3xl) 0;
+            text-align: center;
+            color: white;
+        }
+        .estrutura-cta h2 {
+            font-family: var(--font-display);
+            font-size: var(--font-2xl);
+            margin-bottom: var(--spacing-sm);
+        }
+        .estrutura-cta p {
+            opacity: 0.85;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        /* ── Responsivo ── */
+        @media (max-width: 768px) {
+            .estrutura-grid { grid-template-columns: repeat(2, 1fr); }
+            .estrutura-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .estrutura-grid,
+            .estrutura-grid.cols-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="brand">
+                    <div class="brand-logo">
+                        <span class="script-name">Lara Cristian</span>
+                        <span class="sub-name">Estética e Saúde Integrativa</span>
+                    </div>
+                </a>
+
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li class="mobile-logo">
+                        <div class="brand-logo">
+                            <span class="script-name">Lara Cristian</span>
+                            <span class="sub-name">Estética e Saúde Integrativa</span>
+                        </div>
+                    </li>
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="/#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="/estrutura.html" class="nav-link active">Estrutura</a></li>
+                    <li><a href="/#localizacao" class="nav-link">Localização</a></li>
+                    <li><a href="/blog/" class="nav-link">Artigos</a></li>
+                </ul>
+
+                <a href="/#contato" class="btn btn-primary cta-header">Agendar Avaliação</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ===== HERO ===== -->
+        <section class="estrutura-hero">
+            <div class="container">
+                <span class="section-tag">Nossa Clínica</span>
+                <h1 class="page-title">Conheça Nosso Espaço</h1>
+                <p class="page-subtitle">
+                    Um ambiente pensado para seu conforto e bem-estar, equipado com tecnologia de ponta
+                    e decorado com cuidado para que você se sinta em casa.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== RECEPÇÃO ===== -->
+        <section class="estrutura-category">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Recepção</h2>
+                    <div class="category-line"></div>
+                </div>
+                <div class="estrutura-grid">
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-10.jpg','Recepção — logo iluminada LC Lara Cristian')">
+                        <img src="images/clinica/clinica-10.jpg" alt="Recepção da LC Estética com logo iluminada Lara Cristian" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Recepção</div>
+                    </div>
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-12.jpg','Entrada — sala 1617, Edifício Connect Towers')">
+                        <img src="images/clinica/clinica-12.jpg" alt="Entrada da clínica — sala 1617 no espelho" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Entrada</div>
+                    </div>
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-13.jpg','Porta de entrada — sala 1617, Connect Towers')">
+                        <img src="images/clinica/clinica-13.jpg" alt="Porta de entrada da clínica sala 1617" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Porta de Entrada</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ÁREA DE ESPERA E CERTIFICAÇÕES ===== -->
+        <section class="estrutura-category">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Área de Espera &amp; Certificações</h2>
+                    <div class="category-line"></div>
+                </div>
+                <div class="estrutura-grid">
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-11.jpg','Área de espera — poltronas e divisória geométrica')">
+                        <img src="images/clinica/clinica-11.jpg" alt="Área de espera com poltronas cinza e capim-dourado" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Área de Espera</div>
+                    </div>
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-06.jpg','Parede de certificados e estação de café')">
+                        <img src="images/clinica/clinica-06.jpg" alt="Parede de certificados da Dra. Lara Cristian e estação de chá e café" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Certificações</div>
+                    </div>
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-07.jpg','Corredor com divisória geométrica em madeira')">
+                        <img src="images/clinica/clinica-07.jpg" alt="Corredor da clínica com divisória geométrica em madeira" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Corredor</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONSULTÓRIO ===== -->
+        <section class="estrutura-category">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Consultório</h2>
+                    <div class="category-line"></div>
+                </div>
+                <div class="estrutura-grid cols-2">
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-08.jpg','Consultório — mesa de vidro e dourado')">
+                        <img src="images/clinica/clinica-08.jpg" alt="Consultório da Dra. Lara Cristian — mesa de vidro e estrutura dourada" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Consultório</div>
+                    </div>
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-09.jpg','Consultório — visão interna com estante iluminada')">
+                        <img src="images/clinica/clinica-09.jpg" alt="Consultório — visão interna com estante dourada iluminada" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Consultório</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SALA DE ATENDIMENTO ===== -->
+        <section class="estrutura-category">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Sala de Atendimento</h2>
+                    <div class="category-line"></div>
+                </div>
+                <div class="estrutura-grid">
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-01.jpg','Sala de atendimento — maca estética branca')">
+                        <img src="images/clinica/clinica-01.jpg" alt="Sala de atendimento — maca estética branca com carrinho dourado" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Sala de Atendimento</div>
+                    </div>
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-04.jpg','Sala de atendimento completa — maca e equipamentos')">
+                        <img src="images/clinica/clinica-04.jpg" alt="Sala de atendimento completa com maca e equipamentos" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Equipamentos</div>
+                    </div>
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-05.jpg','Sala com divisória geométrica e maca branca')">
+                        <img src="images/clinica/clinica-05.jpg" alt="Sala de atendimento com divisória geométrica em madeira" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Sala de Atendimento</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SALA DE OZONIOTERAPIA ===== -->
+        <section class="estrutura-category" style="padding-bottom: var(--spacing-3xl);">
+            <div class="container">
+                <div class="category-header">
+                    <h2>Sala de Ozonioterapia</h2>
+                    <div class="category-line"></div>
+                </div>
+                <div class="estrutura-grid cols-2">
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-02.jpg','Sala de ozonioterapia — tina Neuro Food e parede de pedra')">
+                        <img src="images/clinica/clinica-02.jpg" alt="Sala de ozonioterapia com equipamento Neuro Food e parede de pedra" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Sala de Ozonioterapia</div>
+                    </div>
+                    <div class="estrutura-card" onclick="abrirFoto('images/clinica/clinica-03.jpg','Sala de ozonioterapia — visão ampla')">
+                        <img src="images/clinica/clinica-03.jpg" alt="Sala de ozonioterapia — visão ampla com janela" loading="lazy">
+                        <div class="estrutura-card-overlay">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <div class="estrutura-card-label">Sala de Ozonioterapia</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="estrutura-cta">
+            <div class="container">
+                <h2>Venha nos Conhecer Pessoalmente</h2>
+                <p>Edifício Connect Towers — QS 1 Bloco D, Sala 1617 – 16º andar, Águas Claras, Brasília - DF</p>
+                <a href="https://wa.me/5561998092709?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20%C3%A0%20LC%20Est%C3%A9tica."
+                   class="btn btn-whatsapp btn-large"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <path d="M27.281 4.65C24.281 1.65 20.281 0 16.031 0C7.281 0 0.156 7.125 0.156 15.875C0.156 18.625 0.906 21.281 2.281 23.625L0.031 32L8.656 29.781C10.906 31.031 13.437 31.687 16.031 31.687C24.781 31.687 31.906 24.562 31.906 15.812C31.906 11.562 30.281 7.65 27.281 4.65Z" fill="currentColor"/>
+                    </svg>
+                    Agendar pelo WhatsApp
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <dialog class="lightbox" id="lightbox" aria-modal="true" aria-label="Foto ampliada">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">&times;</button>
+        <img src="" alt="" id="lightboxImg">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </dialog>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <span class="script-name">Lara Cristian</span>
+                        <span class="sub-name">Estética e Saúde Integrativa</span>
+                    </div>
+                    <p class="footer-tagline">Realce sua beleza natural com saúde e equilíbrio.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/lc.esteticaesaude_integrativa" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/#servicos">Serviços</a></li>
+                        <li><a href="/#depoimentos">Depoimentos</a></li>
+                        <li><a href="/estrutura.html">Nossa Estrutura</a></li>
+                        <li><a href="/#localizacao">Localização</a></li>
+                        <li><a href="/blog/">Artigos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tratamentos</h4>
+                    <ul>
+                        <li><a href="/servicos/botox-aguas-claras.html">Botox</a></li>
+                        <li><a href="/servicos/fios-pdo-aguas-claras.html">Fios de PDO</a></li>
+                        <li><a href="/servicos/ozonioterapia-brasilia.html">Ozonioterapia</a></li>
+                        <li><a href="/servicos/bioestimulador-colageno-brasilia.html">Bioestimulador</a></li>
+                        <li><a href="/servicos/skinbooster-aguas-claras.html">Skinbooster</a></li>
+                        <li><a href="/servicos/tratamento-melasma-brasilia.html">Melasma</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><a href="tel:+5561998092709">(61) 99809-2709</a></p>
+                    <p>Edifício Connect Towers<br>QS 1 Bloco D, Sala 1617 – 16º andar<br>Águas Claras, Brasília - DF</p>
+                    <p>Seg–Sex: 08:00 – 18:00</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 LC Estética e Saúde Integrativa. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5561998092709?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Falar pelo WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <path d="M27.281 4.65C24.281 1.65 20.281 0 16.031 0C7.281 0 0.156 7.125 0.156 15.875C0.156 18.625 0.906 21.281 2.281 23.625L0.031 32L8.656 29.781C10.906 31.031 13.437 31.687 16.031 31.687C24.781 31.687 31.906 24.562 31.906 15.812C31.906 11.562 30.281 7.65 27.281 4.65ZM16.031 29.031C13.687 29.031 11.406 28.406 9.406 27.25L8.906 26.969L3.906 28.219L5.187 23.344L4.875 22.812C3.625 20.719 2.969 18.344 2.969 15.875C2.969 8.687 8.812 2.844 16.031 2.844C19.531 2.844 22.844 4.156 25.312 6.625C27.781 9.094 29.125 12.406 29.125 15.875C29.125 23.062 23.25 29.031 16.031 29.031Z" fill="currentColor"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // Lightbox
+        var dialog = document.getElementById('lightbox');
+        var img    = document.getElementById('lightboxImg');
+        var cap    = document.getElementById('lightboxCaption');
+
+        function abrirFoto(src, legenda) {
+            img.src = src;
+            img.alt = legenda;
+            cap.textContent = legenda;
+            dialog.showModal();
+        }
+
+        document.getElementById('lightboxClose').addEventListener('click', function() {
+            dialog.close();
+        });
+
+        dialog.addEventListener('click', function(e) {
+            if (e.target === dialog) dialog.close();
+        });
+
+        dialog.addEventListener('close', function() {
+            img.src = '';
+        });
+    </script>
+</body>
+</html>
