@@ -406,7 +406,7 @@ function sendToWhatsApp(formData) {
     
     if (formData.treatment) {
         const treatments = {
-            'botox': 'Toxina Botulínica (Botox)',
+            'harmonizacao-facial': 'Harmonização facial',
             'preenchimento': 'Preenchimento Facial',
             'bioestimulador': 'Bioestimulador de Colágeno',
             'skinbooster': 'Skinbooster',
@@ -444,6 +444,10 @@ function showSuccessMessage() {
     if (form && successMessage) {
         form.style.display = 'none';
         successMessage.classList.add('show');
+
+        if (typeof gtag !== 'undefined' && window.location.pathname.endsWith('contato.html')) {
+            gtag('event', 'conversion', {'send_to': 'AW-18511332095/Z9MGCKOsiZ0dEP-F8vpE'});
+        }
 
         // Voltar ao formulário após 5 segundos
         setTimeout(() => {

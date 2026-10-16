@@ -42,7 +42,7 @@
 | Schema | Raramente implementado corretamente |
 | Google Business | Ativo, 50-150 reviews |
 | Diferencial vs LC | Credencial médica |
-| Fraqueza vs LC | Sem estética, sem botox, sem lifting |
+| Fraqueza vs LC | Sem estética, sem harmonização facial, sem lifting |
 
 **Oportunidade:** LC combina os dois mundos. Keywords "ozonioterapia estética", "ozonioterapia pele" são pouco disputadas.
 
@@ -66,7 +66,7 @@
 ---
 
 ### 4. Dermatologistas com Procedimentos Estéticos no DF
-**Perfil:** Médicos dermatologistas que fazem botox como parte do consultório
+**Perfil:** Médicos dermatologistas que fazem harmonização facial como parte do consultório
 
 | Dimensão | Avaliação |
 |----------|-----------|
@@ -114,17 +114,17 @@
 
 | Keyword | Volume Est. | Dificuldade Est. | Página Alvo |
 |---------|-------------|-----------------|-------------|
-| botox águas claras | 150-400/mês | Média (35-50) | /servicos/botox-aguas-claras.html |
+| harmonização facial águas claras | 150-400/mês | Média (35-50) | /servicos/harmonizacao-facial-aguas-claras.html |
 | fios pdo águas claras | 100-300/mês | Média (30-45) | /servicos/fios-pdo-aguas-claras.html |
-| botox brasília | 300-800/mês | Média-Alta (45-60) | Index + botox page |
+| harmonização facial brasília | 300-800/mês | Média-Alta (45-60) | Index + harmonização facial page |
 | ozonioterapia brasília | 200-600/mês | Média (35-55) | /servicos/ozonioterapia-brasilia.html |
 
 ### Keywords Informacionais (Blog — Topo de Funil)
 
 | Keyword | Volume Est. | Intenção | Artigo |
 |---------|-------------|---------|--------|
-| quanto dura botox | 800-2.000/mês | Informacional | Blog artigo 01 |
-| botox preventivo | 400-1.000/mês | Informacional | Blog artigo 03 |
+| quanto dura harmonização facial | 800-2.000/mês | Informacional | Blog artigo 01 |
+| harmonização facial preventivo | 400-1.000/mês | Informacional | Blog artigo 03 |
 | o que é ozonioterapia | 500-1.500/mês | Informacional | Blog artigo 11 |
 | ozonioterapia funciona | 300-800/mês | Informacional | Blog artigo 12 |
 | fios de pdo o que é | 300-700/mês | Informacional | Blog artigo 19 |
@@ -148,7 +148,7 @@
 **Posicionamento sugerido:** LC Estética deve se posicionar no nicho **"estética natural + saúde integrativa"** — um território que as grandes clínicas de harmonização não ocupam e os especialistas em ozonioterapia também não.
 
 **Vantagem competitiva sustentável:**
-1. Única URL em Águas Claras com páginas dedicadas para "ozonioterapia + botox + terapia neural"
+1. Única URL em Águas Claras com páginas dedicadas para "ozonioterapia + harmonização facial + terapia neural"
 2. Arquitetura SEO superior à maioria dos competidores locais (12 páginas vs. 1 SPA)
 3. Schema MedicalBusiness + AggregateRating + FAQPage já implementado
 4. Blog planejado com 50 temas relevantes e de alto volume

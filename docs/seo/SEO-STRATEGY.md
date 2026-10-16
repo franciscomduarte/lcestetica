@@ -24,7 +24,7 @@
 - **Perfil psicográfico:** Preocupadas com saúde e aparência, buscam resultados naturais, pesquisam antes de decidir, valorizam credenciais e avaliações
 
 ### USP (Proposta Única de Valor)
-> "Única clínica em Águas Claras que combina estética avançada (Botox, Fios de PDO) com saúde integrativa real (Ozonioterapia, Terapia Neural) — tratando corpo e saúde como um todo."
+> "Única clínica em Águas Claras que combina estética avançada (Harmonização Facial, Fios de PDO) com saúde integrativa real (Ozonioterapia, Terapia Neural) — tratando corpo e saúde como um todo."
 
 ---
 
@@ -70,7 +70,7 @@ Prioridades restantes:
 
 Prioridades:
 1. Publicar os 12 primeiros artigos do blog (ver CONTENT-CALENDAR.md)
-2. Adicionar testimonials markup nas páginas de serviço mais fortes (botox, ozonioterapia)
+2. Adicionar testimonials markup nas páginas de serviço mais fortes (harmonização facial, ozonioterapia)
 3. Criar `/servicos/tratamento-capilar-brasilia.html` (alopeica — volume crescente)
 4. Criar página `/galeria` ou seção de resultados (E-E-A-T visual)
 5. Adicionar mais 3 depoimentos específicos por tratamento

@@ -61,7 +61,7 @@ Todas as tarefas abaixo foram implementadas:
 
 | Semana | Ação | Prioridade |
 |--------|------|-----------|
-| 3-4 | Publicar artigos Mês 1 (Botox + Ozonioterapia — 8 artigos) | 🔴 Alto |
+| 3-4 | Publicar artigos Mês 1 (Harmonização Facial + Ozonioterapia — 8 artigos) | 🔴 Alto |
 | 3-4 | Cadastrar NAP: Doctoralia, Yelp, Apontador, Apple Maps | 🟠 Alto |
 | 5-6 | Publicar artigos Mês 2 (PDO, Bioestimulador, Melasma — 8 artigos) | 🔴 Alto |
 | 5-6 | Responder todas as avaliações Google existentes | 🟠 Alto |
@@ -100,7 +100,7 @@ Todas as tarefas abaixo foram implementadas:
 | Otimizar GBP — Posts semanais | Fotos, promoções, novidades | 🟠 Alto |
 | Infográfico linkável — "Guia de Ozonioterapia no Brasil" | Asset de link building | 🟡 Médio |
 | Avaliar performance e ajustar páginas low-performers | GSC + GA4 analysis | 🔴 Alto |
-| Criar páginas de localização extras se viável | Ex.: /botox-taguatinga.html | 🟡 Médio |
+| Criar páginas de localização extras se viável | Ex.: /harmonização facial-taguatinga.html | 🟡 Médio |
 | Testar GEO: verificar citação em ChatGPT/Perplexity | Monitorar menções AI | 🟡 Médio |
 | Revisar e atualizar 5 primeiros artigos com dados novos | Freshness signals | 🟠 Alto |
 

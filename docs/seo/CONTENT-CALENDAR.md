@@ -14,18 +14,18 @@
 
 ---
 
-## Mês 1 (Julho 2026) — Prioridade: Botox e Ozonioterapia
+## Mês 1 (Julho 2026) — Prioridade: Harmonização Facial e Ozonioterapia
 
 | Semana | Artigo | Keyword Principal | Intenção | Página Interna |
 |--------|--------|-----------------|---------|----------------|
-| 1 | **Quanto tempo dura o Botox?** | quanto dura botox | Informacional | /servicos/botox-aguas-claras.html |
-| 1 | **Botox dói? Guia completo para quem tem medo** | botox dói | Informacional | /servicos/botox-aguas-claras.html |
+| 1 | **Quanto tempo dura o Harmonização Facial?** | quanto dura harmonização facial | Informacional | /servicos/harmonizacao-facial-aguas-claras.html |
+| 1 | **Harmonização Facial dói? Guia completo para quem tem medo** | harmonização facial dói | Informacional | /servicos/harmonizacao-facial-aguas-claras.html |
 | 2 | **O que é ozonioterapia e para que serve?** | o que é ozonioterapia | Informacional | /servicos/ozonioterapia-brasilia.html |
 | 2 | **Ozonioterapia realmente funciona? Evidências científicas** | ozonioterapia funciona | Informacional | /servicos/ozonioterapia-brasilia.html |
-| 3 | **Botox preventivo: a partir de que idade começar?** | botox preventivo | Informacional | /servicos/botox-aguas-claras.html |
+| 3 | **Harmonização Facial preventivo: a partir de que idade começar?** | harmonização facial preventivo | Informacional | /servicos/harmonizacao-facial-aguas-claras.html |
 | 3 | **Benefícios da ozonioterapia para a saúde e estética** | benefícios ozonioterapia | Informacional | /servicos/ozonioterapia-brasilia.html |
-| 4 | **Botox vs Preenchimento: qual a diferença e qual escolher?** | diferença botox preenchimento | Comparativo | /servicos/botox-aguas-claras.html |
-| 4 | **Cuidados após o Botox: guia completo de recuperação** | cuidados pós botox | Informacional | /servicos/botox-aguas-claras.html |
+| 4 | **Harmonização Facial vs Preenchimento: qual a diferença e qual escolher?** | diferença harmonização facial preenchimento | Comparativo | /servicos/harmonizacao-facial-aguas-claras.html |
+| 4 | **Cuidados após o Harmonização Facial: guia completo de recuperação** | cuidados pós harmonização facial | Informacional | /servicos/harmonizacao-facial-aguas-claras.html |
 
 ---
 
@@ -34,7 +34,7 @@
 | Semana | Artigo | Keyword Principal | Intenção |
 |--------|--------|-----------------|---------|
 | 5 | **Fios de PDO: o que é, como funciona e quem pode fazer** | fios de pdo o que é | Informacional |
-| 5 | **Bioestimulador de colágeno vs Botox: qual é melhor para mim?** | bioestimulador vs botox | Comparativo |
+| 5 | **Bioestimulador de colágeno vs Harmonização Facial: qual é melhor para mim?** | bioestimulador vs harmonização facial | Comparativo |
 | 6 | **Como tratar melasma definitivamente: guia completo 2026** | tratamento melasma | Comercial |
 | 6 | **Skinbooster: a hidratação que transforma a qualidade da pele** | skinbooster benefícios | Informacional |
 | 7 | **Fios de PDO: tipos Liso, Parafuso e Cog — diferenças** | tipos fios pdo | Informacional |
@@ -54,7 +54,7 @@
 | 10 | **Ozonioterapia em Brasília: onde fazer com segurança** | ozonioterapia brasília onde fazer | Comercial local |
 | 11 | **O que é saúde integrativa? Entenda a abordagem holística** | saúde integrativa o que é | Informacional |
 | 11 | **Ozonioterapia para alopécia e queda de cabelo** | ozonioterapia alopécia | Informacional |
-| 12 | **Botox em Águas Claras: guia completo para 2026** | botox águas claras | Comercial local |
+| 12 | **Harmonização Facial em Águas Claras: guia completo para 2026** | harmonização facial águas claras | Comercial local |
 | 12 | **Tratamento de melasma em Brasília: protocolo avançado** | melasma brasília | Comercial local |
 
 ---
@@ -68,7 +68,7 @@
 | 14 | **Papada sem cirurgia: opções de tratamento** | papada sem cirurgia | Informacional |
 | 14 | **Ozonioterapia para dores articulares e inflamatórias** | ozonioterapia dores articulares | Informacional |
 | 15 | **Tratamento capilar para alopécia em Brasília** | alopécia tratamento brasília | Comercial local |
-| 15 | **Botox para bruxismo: alívio de dores na mandíbula** | botox bruxismo | Informacional |
+| 15 | **Harmonização Facial para bruxismo: alívio de dores na mandíbula** | harmonização facial bruxismo | Informacional |
 | 16 | **Harmonização facial: o que é, procedimentos e resultados** | harmonização facial brasília | Comercial local |
 | 16 | **Longevidade saudável: papel da saúde integrativa** | longevidade saúde integrativa | Informacional |
 
@@ -80,7 +80,7 @@
 |--------|--------|-----------------|---------|
 | 17 | **Skinbooster vs Preenchimento: entenda as diferenças** | skinbooster vs preenchimento | Comparativo |
 | 17 | **Terapia neural vs acupuntura: quando cada um é indicado?** | terapia neural diferença | Comparativo |
-| 18 | **Quanto custa botox em Brasília? Guia de preços 2026** | botox preço brasília | Comercial |
+| 18 | **Quanto custa harmonização facial em Brasília? Guia de preços 2026** | harmonização facial preço brasília | Comercial |
 | 18 | **Ácido hialurônico: o que é, tipos e usos em estética** | ácido hialurônico estética | Informacional |
 | 19 | **Ozonioterapia intravenosa (autohemoterapia): guia completo** | autohemoterapia ozonizada | Informacional |
 | 19 | **Melasma e sol: como proteger e manter os resultados** | melasma protetor solar | Informacional |
@@ -93,7 +93,7 @@
 
 | Semana | Artigo | Keyword Principal | Intenção |
 |--------|--------|-----------------|---------|
-| 21 | **Botox antes do Natal: prazo ideal para agendar** | botox natal antes | Sazonal |
+| 21 | **Harmonização Facial antes do Natal: prazo ideal para agendar** | harmonização facial natal antes | Sazonal |
 | 21 | **Detox de fim de ano: como funciona o protocolo de 30 dias** | detox nutrição protocolo | Informacional |
 | 22 | **Ventosaterapia em Brasília: onde fazer e o que esperar** | ventosaterapia brasília | Comercial local |
 | 22 | **Bioestimulador vs Fios de PDO: quando usar cada um?** | bioestimulador vs fios pdo | Comparativo |

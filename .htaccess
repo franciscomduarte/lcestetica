@@ -52,3 +52,16 @@ RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     Header unset ETag
 </IfModule>
 FileETag None
+
+# Google Ads — redirect página antiga de serviço
+Redirect 301 /servicos/botox-aguas-claras.html /servicos/harmonizacao-facial-aguas-claras.html
+Redirect 301 /blog/botox-aguas-claras.html /blog/harmonizacao-facial-guia-aguas-claras.html
+Redirect 301 /blog/botox-preventivo.html /blog/harmonizacao-facial-preventiva.html
+Redirect 301 /blog/botox-natal.html /blog/harmonizacao-facial-natal.html
+Redirect 301 /blog/botox-bruxismo.html /blog/harmonizacao-facial-bruxismo.html
+Redirect 301 /blog/botox-vs-preenchimento.html /blog/harmonizacao-facial-vs-preenchimento.html
+Redirect 301 /blog/botox-doi.html /blog/harmonizacao-facial-procedimento-conforto.html
+Redirect 301 /blog/botox-preco-brasilia.html /blog/harmonizacao-facial-preco-brasilia.html
+Redirect 301 /blog/bioestimulador-vs-botox.html /blog/bioestimulador-vs-harmonizacao-facial.html
+Redirect 301 /blog/quanto-tempo-dura-botox.html /blog/quanto-tempo-dura-harmonizacao-facial.html
+Redirect 301 /blog/cuidados-pos-botox.html /blog/cuidados-pos-harmonizacao-facial.html

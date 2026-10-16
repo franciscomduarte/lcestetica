@@ -379,7 +379,7 @@ Sitemap: https://www.lcsaudeintegrativa.com.br/sitemap.xml
 
 #### Localização + Serviço
 - estética águas claras
-- botox águas claras
+- harmonização facial águas claras
 - preenchimento facial brasília
 - ozonioterapia df
 - clínica estética brasília
@@ -397,7 +397,7 @@ Sitemap: https://www.lcsaudeintegrativa.com.br/sitemap.xml
 
 #### Long-tail (Específicas)
 - clínica de estética perto de mim águas claras
-- quanto custa botox em águas claras
+- quanto custa harmonização facial em águas claras
 - melhor clínica de estética brasília
 - ozonioterapia para que serve brasília
 - tratamento papada águas claras

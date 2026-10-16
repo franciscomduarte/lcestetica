@@ -15,7 +15,7 @@ https://www.lcsaudeintegrativa.com.br/
 ├── /contato.html                                  ← Agendamento + Formulário + Mapa
 │
 ├── /servicos/
-│   ├── botox-aguas-claras.html                   ← "botox águas claras"
+│   ├── harmonização facial-aguas-claras.html                   ← "harmonização facial águas claras"
 │   ├── ozonioterapia-brasilia.html               ← "ozonioterapia brasília"
 │   ├── fios-pdo-aguas-claras.html                ← "fios pdo águas claras"
 │   ├── bioestimulador-colageno-brasilia.html     ← "bioestimulador colágeno brasília"
@@ -41,9 +41,9 @@ https://www.lcsaudeintegrativa.com.br/
 │   └── tratamento-capilar-brasilia.html          ← Fase 2 (Semana 11-12)
 │
 /blog/
-│   ├── quanto-tempo-dura-botox.html              ← Publicar Jul/2026
-│   ├── botox-doi.html
-│   ├── botox-preventivo.html
+│   ├── quanto-tempo-dura-harmonização facial.html              ← Publicar Jul/2026
+│   ├── harmonização facial-doi.html
+│   ├── harmonização facial-preventivo.html
 │   ├── o-que-e-ozonioterapia.html
 │   ├── ozonioterapia-funciona.html
 │   ├── ... (48 artigos até Dez/2026)
@@ -89,7 +89,7 @@ https://www.lcsaudeintegrativa.com.br/
 
 | Hub | Páginas que Apontam Para |
 |-----|--------------------------|
-| Botox | /servicos/botox-aguas-claras.html | 8+ artigos de blog sobre botox |
+| Harmonização Facial | /servicos/harmonizacao-facial-aguas-claras.html | 8+ artigos de blog sobre harmonização facial |
 | Ozonioterapia | /servicos/ozonioterapia-brasilia.html | 8+ artigos de blog sobre ozônio |
 | Saúde Integrativa | Index + Ozônio + Terapia Neural + Ventosa | Artigos gerais |
 
@@ -103,7 +103,7 @@ https://www.lcsaudeintegrativa.com.br/
 /sobre.html (priority 0.8, monthly)
 /contato.html (priority 0.9, monthly)
 /blog/ (priority 0.7, weekly)
-/servicos/botox-aguas-claras.html (priority 0.9, monthly)
+/servicos/harmonizacao-facial-aguas-claras.html (priority 0.9, monthly)
 /servicos/ozonioterapia-brasilia.html (priority 0.9, monthly)
 /servicos/fios-pdo-aguas-claras.html (priority 0.9, monthly)
 /servicos/bioestimulador-colageno-brasilia.html (priority 0.9, monthly)
@@ -123,7 +123,7 @@ https://www.lcsaudeintegrativa.com.br/
 ## Breadcrumbs — Padrão
 
 ```
-Home > Serviços > Botox em Águas Claras
+Home > Serviços > Harmonização Facial em Águas Claras
 Home > Sobre
 Home > Contato
 Home > Blog
@@ -138,8 +138,8 @@ Todas as páginas já têm o schema BreadcrumbList implementado.
 
 | Regra | Exemplo |
 |-------|---------|
-| Letras minúsculas | ✅ `/servicos/botox-aguas-claras.html` |
-| Hífens para espaços | ✅ `botox-aguas-claras` |
+| Letras minúsculas | ✅ `/servicos/harmonizacao-facial-aguas-claras.html` |
+| Hífens para espaços | ✅ `harmonização facial-aguas-claras` |
 | Sem acentos | ✅ `aguas-claras` (não `águas-claras`) |
 | Keyword principal na URL | ✅ `tratamento-melasma-brasilia` |
 | Sem parâmetros desnecessários | ✅ |
