@@ -397,7 +397,7 @@ function validateForm(form) {
 
 // Enviar para WhatsApp
 function sendToWhatsApp(formData) {
-    const phone = '5561998092709'; // Número do WhatsApp (com código do país)
+    const phone = '5561965222456'; // Número do WhatsApp (com código do país)
     
     let message = `*Nova Solicitação de Contato*\n\n`;
     message += `*Nome:* ${formData.name}\n`;

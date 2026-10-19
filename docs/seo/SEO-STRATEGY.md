@@ -11,7 +11,7 @@
 | **Profissional** | Dra. Lara Cristian |
 | **Tipo** | Clínica de Estética + Saúde Integrativa (Local Service Business) |
 | **Localização** | Connect Towers - Q. 101 lote 07-A, Águas Claras, Brasília - DF, CEP 72030-015 |
-| **Telefone** | (61) 99809-2709 |
+| **Telefone** | (61) 96522-2456 |
 | **URL** | https://www.lcsaudeintegrativa.com.br/ |
 | **Instagram** | @lcsaudeintegrativa |
 | **GA4** | G-VSH348ZRZS |
