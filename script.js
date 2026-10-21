@@ -8,6 +8,147 @@
 let currentSlide = 0;
 let isAnimating = false;
 
+const LC_GADS_STORAGE_KEY = 'lc_google_ads_click';
+const LC_GADS_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+const LC_WHATSAPP_PHONE = '5561965222456';
+
+const LC_SERVICE_PAGE_PROCEDURES = {
+    'harmonizacao-facial-aguas-claras': 'Harmonização Facial',
+    'tratamento-melasma-brasilia': 'tratamento de Melasma',
+    'bioestimulador-colageno-brasilia': 'Bioestimulador de Colágeno',
+    'fios-pdo-aguas-claras': 'Fios de PDO',
+    'ozonioterapia-brasilia': 'Ozonioterapia',
+};
+
+// ========================================
+// 1b. ORIGEM GOOGLE ADS → TEXTO WHATSAPP
+// ========================================
+function captureGoogleAdsAttribution() {
+    try {
+        const params = new URLSearchParams(window.location.search);
+        const utmSource = (params.get('utm_source') || '').toLowerCase();
+        const fromGoogle =
+            params.has('gclid') ||
+            params.has('gbraid') ||
+            params.has('wbraid') ||
+            utmSource === 'google';
+
+        if (fromGoogle) {
+            localStorage.setItem(LC_GADS_STORAGE_KEY, String(Date.now()));
+        }
+    } catch (e) {
+        /* localStorage indisponível */
+    }
+}
+
+function hasGoogleAdsAttribution() {
+    try {
+        const raw = localStorage.getItem(LC_GADS_STORAGE_KEY);
+        if (!raw) return false;
+
+        const setAt = parseInt(raw, 10);
+        if (Number.isNaN(setAt) || Date.now() - setAt > LC_GADS_TTL_MS) {
+            localStorage.removeItem(LC_GADS_STORAGE_KEY);
+            return false;
+        }
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+
+function isGeneralSitePage() {
+    const path = window.location.pathname.replace(/\/$/, '') || '/';
+    return (
+        path === '/' ||
+        path === '/index.html' ||
+        path === '/contato.html' ||
+        path === '/sobre.html' ||
+        path === '/estrutura.html'
+    );
+}
+
+function getServiceSlugFromPath() {
+    const match = window.location.pathname.match(/\/servicos\/([^/]+)\.html/i);
+    return match ? match[1] : null;
+}
+
+function extractInterestFromWhatsAppHref(href) {
+    try {
+        const url = new URL(href, window.location.origin);
+        const text = url.searchParams.get('text');
+        if (!text) return null;
+
+        const interestMatch = text.match(/Tenho interesse em\s+(.+)/i);
+        if (interestMatch) return interestMatch[1].trim();
+
+        return null;
+    } catch (e) {
+        return null;
+    }
+}
+
+function resolveWhatsAppProcedure(anchor) {
+    const href = anchor.getAttribute('href') || '';
+    const fromLinkText = extractInterestFromWhatsAppHref(href);
+    if (fromLinkText) return fromLinkText;
+
+    const slug = getServiceSlugFromPath();
+    if (slug && LC_SERVICE_PAGE_PROCEDURES[slug]) {
+        return LC_SERVICE_PAGE_PROCEDURES[slug];
+    }
+
+    const serviceCard = anchor.closest('.service-card');
+    if (serviceCard) {
+        const title = serviceCard.querySelector('.service-title')?.textContent?.trim();
+        if (title) return title;
+    }
+
+    return null;
+}
+
+function buildGoogleAdsWhatsAppMessage(procedure) {
+    if (procedure) {
+        return `Olá! Vi o anúncio no Google e quero agendar uma avaliação de ${procedure}.`;
+    }
+    return 'Olá! Vi o anúncio no Google e quero agendar uma avaliação.';
+}
+
+function setWhatsAppHrefText(anchor, message) {
+    const href = anchor.getAttribute('href');
+    if (!href || (!href.includes('wa.me') && !href.includes('whatsapp.com'))) return;
+
+    try {
+        const url = new URL(href, window.location.origin);
+        const phonePath = url.pathname.replace(/^\//, '');
+        if (/^\d+$/.test(phonePath)) {
+            url.pathname = `/${LC_WHATSAPP_PHONE}`;
+        }
+        url.searchParams.set('text', message);
+        anchor.setAttribute('href', url.toString());
+    } catch (e) {
+        /* href inválido */
+    }
+}
+
+function initGoogleAdsWhatsAppMessages() {
+    if (!hasGoogleAdsAttribution()) return;
+
+    const generalPage = isGeneralSitePage();
+
+    document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach((anchor) => {
+        let procedure = resolveWhatsAppProcedure(anchor);
+
+        if (generalPage && !anchor.closest('.service-card')) {
+            procedure = null;
+        }
+
+        setWhatsAppHrefText(anchor, buildGoogleAdsWhatsAppMessage(procedure));
+    });
+}
+
+captureGoogleAdsAttribution();
+
 // ========================================
 // 2. DOM CONTENT LOADED - INICIALIZAÇÃO
 // ========================================
@@ -19,6 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTestimonialsCarousel();
     initFormValidation();
     initPhoneMask();
+    initGoogleAdsWhatsAppMessages();
     initWhatsAppTracking();
     initLazyLoading();
     initScrollAnimations();
