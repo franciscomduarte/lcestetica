@@ -80,7 +80,7 @@ function extractInterestFromWhatsAppHref(href) {
         if (!text) return null;
 
         const interestMatch = text.match(/Tenho interesse em\s+(.+)/i);
-        if (interestMatch) return interestMatch[1].trim();
+        if (interestMatch) return normalizeProcedureLabel(interestMatch[1]);
 
         return null;
     } catch (e) {
@@ -107,9 +107,15 @@ function resolveWhatsAppProcedure(anchor) {
     return null;
 }
 
+function normalizeProcedureLabel(procedure) {
+    if (!procedure) return procedure;
+    return procedure.trim().replace(/[.!?…]+$/g, '').trim();
+}
+
 function buildGoogleAdsWhatsAppMessage(procedure) {
-    if (procedure) {
-        return `Olá! Vi o anúncio no Google e quero agendar uma avaliação de ${procedure}.`;
+    const label = normalizeProcedureLabel(procedure);
+    if (label) {
+        return `Olá! Vi o anúncio no Google e quero agendar uma avaliação de ${label}.`;
     }
     return 'Olá! Vi o anúncio no Google e quero agendar uma avaliação.';
 }
