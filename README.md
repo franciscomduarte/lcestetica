@@ -153,7 +153,7 @@ fbq('track', 'PageView');
 ### 5. Informações da Clínica
 
 **O que revisar:**
-- Telefone/WhatsApp (verifique se está correto: 61 96522-2456)
+- Telefone/WhatsApp (verifique se está correto: 61 99652-2456)
 - Endereço completo
 - Horários de atendimento
 - Links de redes sociais

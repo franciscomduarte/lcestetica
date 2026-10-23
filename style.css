@@ -283,7 +283,8 @@ ul, ol {
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
+    right: auto;
     width: 60px;
     height: 60px;
     background: linear-gradient(135deg, #25D366, #1FB855);
@@ -314,7 +315,8 @@ ul, ol {
 @media (max-width: 768px) {
     .whatsapp-float {
         bottom: 20px;
-        right: 20px;
+        left: 20px;
+        right: auto;
         width: 56px;
         height: 56px;
     }

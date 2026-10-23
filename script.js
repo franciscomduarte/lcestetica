@@ -10,7 +10,7 @@ let isAnimating = false;
 
 const LC_GADS_STORAGE_KEY = 'lc_google_ads_click';
 const LC_GADS_TTL_MS = 30 * 24 * 60 * 60 * 1000;
-const LC_WHATSAPP_PHONE = '5561965222456';
+const LC_WHATSAPP_PHONE = '5561996522456';
 
 const LC_SERVICE_PAGE_PROCEDURES = {
     'harmonizacao-facial-aguas-claras': 'Harmonização Facial',
@@ -149,8 +149,105 @@ function initGoogleAdsWhatsAppMessages() {
             procedure = null;
         }
 
+        if (anchor.classList.contains('whatsapp-float') && !generalPage && !procedure) {
+            const slug = getServiceSlugFromPath();
+            if (slug && LC_SERVICE_PAGE_PROCEDURES[slug]) {
+                procedure = LC_SERVICE_PAGE_PROCEDURES[slug];
+            }
+        }
+
         setWhatsAppHrefText(anchor, buildGoogleAdsWhatsAppMessage(procedure));
     });
+}
+
+const LC_WHATSAPP_FLOAT_SVG =
+    '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">' +
+    '<path d="M27.281 4.65C24.281 1.65 20.281 0 16.031 0C7.281 0 0.156 7.125 0.156 15.875C0.156 18.625 0.906 21.281 2.281 23.625L0.031 32L8.656 29.781C10.906 31.031 13.437 31.687 16.031 31.687C24.781 31.687 31.906 24.562 31.906 15.812C31.906 11.562 30.281 7.65 27.281 4.65ZM16.031 29.031C13.687 29.031 11.406 28.406 9.406 27.25L8.906 26.969L3.906 28.219L5.187 23.344L4.875 22.812C3.625 20.719 2.969 18.344 2.969 15.875C2.969 8.687 8.812 2.844 16.031 2.844C19.531 2.844 22.844 4.156 25.312 6.625C27.781 9.094 29.125 12.406 29.125 15.875C29.125 23.062 23.25 29.031 16.031 29.031ZM23.219 19.156C22.812 18.969 20.875 18.031 20.5 17.875C20.125 17.75 19.844 17.688 19.562 18.094C19.281 18.5 18.562 19.375 18.312 19.656C18.094 19.937 17.844 19.969 17.437 19.781C15.5 18.812 14.219 18.062 12.906 15.781C12.562 15.187 13.25 15.219 13.875 14C14 13.719 13.937 13.5 13.844 13.312C13.75 13.125 12.937 11.187 12.594 10.406C12.25 9.656 11.906 9.75 11.656 9.75C11.406 9.75 11.125 9.75 10.844 9.75C10.562 9.75 10.125 9.844 9.75 10.25C9.375 10.656 8.375 11.594 8.375 13.531C8.375 15.469 9.781 17.344 9.969 17.625C10.156 17.906 12.937 22.156 17.156 23.875C19.844 25.062 20.812 25.156 22.062 24.969C22.844 24.844 24.406 24 24.75 23.062C25.094 22.125 25.094 21.344 25 21.187C24.906 21 24.625 20.906 24.219 20.719L23.219 19.156Z" fill="white"/></svg>';
+
+function getDefaultWhatsAppMessageForPage() {
+    const slug = getServiceSlugFromPath();
+    if (slug && LC_SERVICE_PAGE_PROCEDURES[slug]) {
+        return `Olá! Gostaria de agendar uma avaliação de ${LC_SERVICE_PAGE_PROCEDURES[slug]}.`;
+    }
+    return 'Olá! Gostaria de agendar uma avaliação.';
+}
+
+function normalizeWhatsAppPhoneInHref(anchor) {
+    const href = anchor.getAttribute('href');
+    if (!href || (!href.includes('wa.me') && !href.includes('whatsapp.com'))) return;
+
+    try {
+        const url = new URL(href, window.location.origin);
+        const phonePath = url.pathname.replace(/^\//, '');
+        if (/^\d+$/.test(phonePath)) {
+            url.pathname = `/${LC_WHATSAPP_PHONE}`;
+            anchor.setAttribute('href', url.toString());
+        }
+    } catch (e) {
+        /* href inválido */
+    }
+}
+
+function normalizeAllWhatsAppPhoneNumbers() {
+    document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach(normalizeWhatsAppPhoneInHref);
+}
+
+function syncWhatsAppFloatWithPage() {
+    const float = document.querySelector('a.whatsapp-float');
+    if (!float) return;
+
+    const reference = Array.from(document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]'))
+        .find((anchor) => !anchor.classList.contains('whatsapp-float') && anchor.getAttribute('href')?.includes('text='));
+
+    if (reference) {
+        try {
+            const refUrl = new URL(reference.getAttribute('href'), window.location.origin);
+            const text = refUrl.searchParams.get('text');
+            const floatUrl = new URL(float.getAttribute('href') || `https://wa.me/${LC_WHATSAPP_PHONE}`, window.location.origin);
+            floatUrl.pathname = `/${LC_WHATSAPP_PHONE}`;
+            if (text) floatUrl.searchParams.set('text', text);
+            float.setAttribute('href', floatUrl.toString());
+            return;
+        } catch (e) {
+            /* fallback abaixo */
+        }
+    }
+
+    float.setAttribute(
+        'href',
+        `https://wa.me/${LC_WHATSAPP_PHONE}?text=${encodeURIComponent(getDefaultWhatsAppMessageForPage())}`
+    );
+}
+
+function ensureGlobalWhatsAppFloat() {
+    if (!document.body) return;
+
+    let float = document.querySelector('a.whatsapp-float');
+    if (!float) {
+        float = document.createElement('a');
+        float.className = 'whatsapp-float';
+        float.target = '_blank';
+        float.rel = 'noopener noreferrer';
+        float.setAttribute('aria-label', 'Contato via WhatsApp');
+        float.innerHTML = LC_WHATSAPP_FLOAT_SVG;
+        document.body.appendChild(float);
+    }
+
+    if (!float.querySelector('svg')) {
+        float.innerHTML = LC_WHATSAPP_FLOAT_SVG;
+    }
+
+    float.id = 'whatsapp-button';
+    syncWhatsAppFloatWithPage();
+}
+
+function initWhatsAppLinks() {
+    ensureGlobalWhatsAppFloat();
+    normalizeAllWhatsAppPhoneNumbers();
+    if (!hasGoogleAdsAttribution()) {
+        syncWhatsAppFloatWithPage();
+    }
+    initGoogleAdsWhatsAppMessages();
 }
 
 captureGoogleAdsAttribution();
@@ -166,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTestimonialsCarousel();
     initFormValidation();
     initPhoneMask();
-    initGoogleAdsWhatsAppMessages();
+    initWhatsAppLinks();
     initWhatsAppTracking();
     initLazyLoading();
     initScrollAnimations();
@@ -545,7 +642,7 @@ function validateForm(form) {
 
 // Enviar para WhatsApp
 function sendToWhatsApp(formData) {
-    const phone = '5561965222456'; // Número do WhatsApp (com código do país)
+    const phone = '5561996522456'; // Número do WhatsApp (com código do país)
     
     let message = `*Nova Solicitação de Contato*\n\n`;
     message += `*Nome:* ${formData.name}\n`;
@@ -814,6 +911,10 @@ window.addEventListener('scroll', throttle(function() {
 // ========================================
 console.log('%c🌟 LC Estética e Saúde Integrativa', 'color: #8B6F47; font-size: 20px; font-weight: bold;');
 console.log('%cPara suporte: https://www.anthropic.com', 'color: #999; font-size: 10px;');
+
+if (document.body) {
+    ensureGlobalWhatsAppFloat();
+}
 
 // ========================================
 // FIM DO SCRIPT
