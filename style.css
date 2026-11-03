@@ -585,17 +585,31 @@ a .brand-logo span.sub-name {
     
     .navbar {
         padding: var(--spacing-sm) 0;
-        justify-content: flex-end; /* Menu toggle à direita */
+        justify-content: space-between;
+        align-items: center;
         min-height: 60px;
     }
     
-    /* OCULTAR LOGO NO MOBILE */
-    .navbar .brand-logo {
-        display: none !important;
+    .navbar > .logo.brand-logo,
+    .navbar > .brand-logo {
+        display: flex !important;
+        flex: 1;
+        min-width: 0;
+        max-width: calc(100% - 120px);
+    }
+
+    .navbar > .logo.brand-logo .sub-name,
+    .navbar > .brand-logo .sub-name {
+        display: none;
+    }
+
+    .navbar .cta-header {
+        display: none;
     }
     
     .menu-toggle {
         display: flex;
+        flex-shrink: 0;
     }
     
     .nav-menu {
@@ -2236,8 +2250,91 @@ a .brand-logo span.sub-name {
     .service-page-hero .container {
         grid-template-columns: 1fr;
     }
-    .page-hero-image { order: -1; }
-    .page-hero-image img { max-height: 320px; }
+    .page-hero-content { order: 0; }
+    .page-hero-image { order: 1; }
+    .page-hero-image img { max-height: 220px; }
+}
+
+/* Landing pages Google Ads — melasma & ozonioterapia */
+body.landing-ads .service-page-hero {
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+body.landing-ads .section {
+    padding: var(--spacing-2xl) 0;
+}
+
+body.landing-ads .cta-premium,
+body.landing-ads .section.contact {
+    padding: var(--spacing-2xl) 0;
+}
+
+body.landing-ads .hero-result-caption {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--color-text-secondary);
+    text-align: center;
+}
+
+body.landing-ads .hero-result-figure {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    body.landing-ads .breadcrumb-nav {
+        padding: 0.35rem 0;
+    }
+
+    body.landing-ads .service-page-hero {
+        padding: 0.75rem 0 1rem;
+    }
+
+    body.landing-ads .hero-trust,
+    body.landing-ads .hero-cta .btn-outline-dark {
+        display: none;
+    }
+
+    body.landing-ads .hero-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.45;
+        margin-bottom: 0.75rem;
+    }
+
+    body.landing-ads .hero-title {
+        font-size: 1.65rem;
+        margin-bottom: 0.5rem;
+    }
+
+    body.landing-ads .page-hero-image img {
+        max-height: 140px;
+    }
+
+    body.landing-ads .hero-cta .btn-large {
+        width: 100%;
+        text-align: center;
+    }
+
+    body.landing-ads .page-hero-content {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 0.5rem;
+    }
+
+    body.landing-ads .whatsapp-float {
+        bottom: 88px;
+        z-index: 998;
+    }
+}
+
+@media (min-width: 769px) {
+    body.landing-ads .service-page-hero .container {
+        gap: var(--spacing-xl);
+    }
+
+    body.landing-ads .service-page-hero {
+        padding: var(--spacing-2xl) 0 var(--spacing-xl);
+    }
 }
 
 /* ========================================

@@ -149,7 +149,11 @@ function initGoogleAdsWhatsAppMessages() {
             procedure = null;
         }
 
-        if (anchor.classList.contains('whatsapp-float') && !generalPage && !procedure) {
+        if (
+            (anchor.classList.contains('whatsapp-float') || anchor.classList.contains('cta-header')) &&
+            !generalPage &&
+            !procedure
+        ) {
             const slug = getServiceSlugFromPath();
             if (slug && LC_SERVICE_PAGE_PROCEDURES[slug]) {
                 procedure = LC_SERVICE_PAGE_PROCEDURES[slug];
@@ -241,8 +245,24 @@ function ensureGlobalWhatsAppFloat() {
     syncWhatsAppFloatWithPage();
 }
 
+function initHeaderWhatsAppCta() {
+    document.querySelectorAll('a.cta-header').forEach((anchor) => {
+        const href = anchor.getAttribute('href') || '';
+        if (!href.includes('contato.html')) return;
+
+        const message = getDefaultWhatsAppMessageForPage();
+        anchor.setAttribute(
+            'href',
+            `https://wa.me/${LC_WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`
+        );
+        anchor.setAttribute('target', '_blank');
+        anchor.setAttribute('rel', 'noopener noreferrer');
+    });
+}
+
 function initWhatsAppLinks() {
     ensureGlobalWhatsAppFloat();
+    initHeaderWhatsAppCta();
     normalizeAllWhatsAppPhoneNumbers();
     if (!hasGoogleAdsAttribution()) {
         syncWhatsAppFloatWithPage();
@@ -914,6 +934,8 @@ console.log('%cPara suporte: https://www.anthropic.com', 'color: #999; font-size
 
 if (document.body) {
     ensureGlobalWhatsAppFloat();
+    initHeaderWhatsAppCta();
+    normalizeAllWhatsAppPhoneNumbers();
 }
 
 // ========================================

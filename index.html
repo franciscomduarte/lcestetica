@@ -132,18 +132,20 @@ document.addEventListener('DOMContentLoaded', function () {
         "latitude": -15.8367,
         "longitude": -48.0261
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Friday", "Saturday"],
+          "opens": "08:00",
+          "closes": "12:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Thursday",
+          "opens": "14:00",
+          "closes": "19:00"
+        }
+      ],
       "sameAs": [
         "https://www.instagram.com/lc.esteticaesaude_integrativa",
         "https://www.facebook.com/lcsaudeintegrativa"
@@ -220,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function () {
           "name": "Qual é a localização da clínica em Águas Claras?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A LC Estética e Saúde Integrativa está localizada no Edifício Connect Towers – QS 1 Bloco D, Sala 1617 – 16º andar, Águas Claras, Brasília - DF, CEP 72030-015. Atendemos de segunda a sexta das 08:00 às 18:00 com hora marcada. Entre em contato pelo (61) 99652-2456."
+            "text": "A LC Estética e Saúde Integrativa está localizada no Edifício Connect Towers – QS 1 Bloco D, Sala 1617 – 16º andar, Águas Claras, Brasília - DF, CEP 72030-015. Seg, ter, qua, sex e sáb: 8h às 12h · Qui: 14h às 19h com hora marcada. Entre em contato pelo (61) 99652-2456."
           }
         },
         {
@@ -1229,7 +1231,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                         <div class="info-content">
                             <h3>Horário de Atendimento</h3>
-                            <p>Segunda a Sexta: 08:00 - 18:00<br>
+                            <p>Seg, ter, qua, sex e sáb: 8h às 12h · Qui: 14h às 19h<br>
                                Atendimento com hora marcada</p>
                         </div>
                     </div>
@@ -1475,7 +1477,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </details>
                 <details class="faq-item">
                     <summary class="faq-question">Como agendar uma avaliação na clínica?</summary>
-                    <div class="faq-answer"><p>Você pode agendar diretamente pelo WhatsApp <a href="https://wa.me/5561996522456" target="_blank" rel="noopener noreferrer">(61) 99652-2456</a>, pelo formulário de contato nesta página, ou presencialmente no Edifício Connect Towers - Águas Claras. Atendemos de segunda a sexta das 08:00 às 18:00.</p></div>
+                    <div class="faq-answer"><p>Você pode agendar diretamente pelo WhatsApp <a href="https://wa.me/5561996522456" target="_blank" rel="noopener noreferrer">(61) 99652-2456</a>, pelo formulário de contato nesta página, ou presencialmente no Edifício Connect Towers - Águas Claras. Seg, ter, qua, sex e sáb: 8h às 12h · Qui: 14h às 19h.</p></div>
                 </details>
             </div>
         </div>
@@ -1573,7 +1575,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
-                            <span>Seg - Sex: 08:00 - 18:00</span>
+                            <span>Seg, ter, qua, sex e sáb: 8h às 12h · Qui: 14h às 19h</span>
                         </li>
                     </ul>
                 </div>

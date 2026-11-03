@@ -59,12 +59,20 @@ document.addEventListener('DOMContentLoaded', function () {
         "latitude": -15.8367,
         "longitude": -48.0261
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
-      }
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Friday","Saturday"],
+          "opens": "08:00",
+          "closes": "12:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Thursday",
+          "opens": "14:00",
+          "closes": "19:00"
+        }
+      ]
     }
     </script>
     <style>
@@ -117,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="contact-info-col">
                     <span class="section-tag">Entre em Contato</span>
                     <h1 class="section-title" style="margin-top: 0.5rem;">Agende sua<br><em style="color: var(--color-primary); font-style: italic;">Avaliação</em></h1>
-                    <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-xl);">Preencha o formulário ao lado ou entre em contato diretamente. Atendemos de segunda a sexta, das 08:00 às 18:00, com hora marcada.</p>
+                    <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-xl);">Preencha o formulário ao lado ou entre em contato diretamente. Seg, ter, qua, sex e sáb: 8h às 12h · Qui: 14h às 19h, com hora marcada.</p>
 
                     <a href="https://wa.me/5561996522456?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação."
                        class="btn btn-whatsapp btn-large" style="width:100%; justify-content: center; margin-bottom: var(--spacing-xl);"
@@ -137,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                         <div class="info-card-full">
                             <div class="info-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-                            <div class="info-content"><h3>Horário de Atendimento</h3><p>Segunda a Sexta: 08:00 – 18:00<br>Atendimento com hora marcada</p></div>
+                            <div class="info-content"><h3>Horário de Atendimento</h3><p>Seg, ter, qua, sex e sáb: 8h às 12h · Qui: 14h às 19h<br>Atendimento com hora marcada</p></div>
                         </div>
                         <div class="info-card-full">
                             <div class="info-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z"/></svg></div>
@@ -331,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
-                            <span>Seg - Sex: 08:00 - 18:00</span>
+                            <span>Seg, ter, qua, sex e sáb: 8h às 12h · Qui: 14h às 19h</span>
                         </li>
                     </ul>
                 </div>
